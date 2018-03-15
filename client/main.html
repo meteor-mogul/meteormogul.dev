@@ -1,0 +1,87 @@
+<body>
+
+  <!-- Render target for Vue app.  Use id to identify. -->
+  <div id="app"></div>
+
+  <!-- Template for Vue component goes in <script> tag. -->
+  <!-- Since we're using static-html package to parse .html files,
+       this template will be processed by VueJS and not Blaze. -->
+  <!-- Each template must have one wrapping tag. -->
+  <!-- <v-*> HTML tags are Vuetify components. -->
+  <!-- Wrap Vuetify app in a <v-app> tag. -->
+  <script type="text/x-template" id="app-template">
+    <v-app>
+      <v-navigation-drawer app>
+        <div>Quick Links</div>
+      </v-navigation-drawer>
+      <v-toolbar app dark color="primary">
+        <v-toolbar-side-icon></v-toolbar-side-icon>
+        <v-toolbar-title>Welcome to Meteor Mogul!</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <v-btn>Learn</v-btn>
+          <v-btn>Play</v-btn>
+          <v-btn>Create</v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-content>
+        <v-card>
+          <!-- Use handlebars for displaying data. -->
+          <v-card-text>
+            <v-icon large>home</v-icon>
+            {{ message }}
+            <!-- VueRouter gives us <router-link> tags that will be rendered
+                 as <a> tags by default. -->
+            <router-link to="/happy">Happy</router-link>
+            <router-link to="/sad">Sad</router-link>
+            <!-- VueRouter will replace <router-view> based on route. -->
+            <router-view></router-view>
+          </v-card-text>
+        </v-card>
+        <v-card>
+          <v-card-text>
+            <v-btn>Get Started</v-btn>
+            <v-btn href="https://github.com/meteor-mogul"
+                   target="_blank">GitHub</v-btn>
+          </v-card-text>
+        </v-card>
+        <v-card>
+          <v-card-text>
+            <v-btn>Orientation</v-btn>
+            <v-btn>Survival Guide</v-btn>
+            <v-btn>Toolkit</v-btn>
+          </v-card-text>
+        </v-card>
+        <v-card>
+          <v-card-text>
+            <v-btn>Bestiary</v-btn>
+            <v-btn>Formulary</v-btn>
+            <v-btn>Menagerie</v-btn>
+          </v-card-text>
+        </v-card>
+        <v-card>
+          <v-card-text>
+            <v-btn>Bazaar</v-btn>
+            <v-btn>Forum</v-btn>
+            <v-btn>Observatory</v-btn>
+          </v-card-text>
+        </v-card>
+      </v-content>
+      <v-footer app>
+      <v-toolbar>
+        <v-toolbar-title>Code your own personal and demo apps with Meteor + VueJS + Material Design (Vuetify)</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <a href="https://meteor-mogul.github.io/"
+             target="_blank">About Meteor Mogul</a>
+          &bull;
+          <a>Donations Accepted!</a>
+          &bull;
+          <a>Help Wanted</a>
+        </v-toolbar-items>
+      </v-toolbar>
+      </v-footer>
+    </v-app>
+  </script>
+
+</body>
