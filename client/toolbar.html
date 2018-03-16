@@ -7,9 +7,33 @@
       <v-toolbar-title>Welcome to Meteor Mogul!</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn>Learn</v-btn>
-        <v-btn>Play</v-btn>
-        <v-btn>Create</v-btn>
+        <v-menu open-on-hover bottom offset-y>
+          <v-btn slot="activator">Learn</v-btn>
+          <v-list>
+            <v-subheader inset>Documentation</v-subheader>
+            <v-list-tile v-for="doc in documentation" :key="doc.title">
+              <v-list-tile-title><router-link :to="doc.href">{{ doc.title }}</router-link></v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+        <v-menu open-on-hover bottom offset-y>
+          <v-btn slot="activator">Play</v-btn>
+          <v-list>
+            <v-subheader inset>Heroku Demos</v-subheader>
+            <v-list-tile v-for="demo in demos" :key="demo.title">
+              <v-list-tile-title><a :href="demo.href" target="_blank">{{ demo.title }}</a></v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+        <v-menu open-on-hover bottom offset-y>
+          <v-btn slot="activator">Create</v-btn>
+          <v-list>
+            <v-subheader inset>GitHub Repos</v-subheader>
+            <v-list-tile v-for="repo in repos" :key="repo.title">
+              <v-list-tile-title><a :href="repo.href" target="_blank">{{ repo.title }}</a></v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
       </v-toolbar-items>
     </v-toolbar>
   </script>

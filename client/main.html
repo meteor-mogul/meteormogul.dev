@@ -10,7 +10,7 @@
   <!-- <v-*> HTML tags are Vuetify components. -->
   <!-- Wrap Vuetify app in a <v-app> tag. -->
   <script type="text/x-template" id="app-template">
-    <v-app>
+    <v-app id="mm-app">
       <v-navigation-drawer
         app
         v-model="visibleDrawer"
@@ -19,47 +19,144 @@
       </v-navigation-drawer>
       <mm-toolbar></mm-toolbar>
       <v-content app>
-        <v-card>
-          <!-- Use handlebars for displaying data. -->
-          <v-card-text>
-            <router-link to="/"><v-icon large>home</v-icon></router-link>
-            {{ message }}
-            <!-- VueRouter gives us <router-link> tags that will be rendered
-                 as <a> tags by default. -->
-            <router-link to="/happy">Happy</router-link>
-            <router-link to="/sad">Sad</router-link>
-            <!-- VueRouter will replace <router-view> based on route. -->
-            <router-view></router-view>
-          </v-card-text>
-        </v-card>
-        <v-card>
-          <v-card-text>
-            <v-btn>Get Started</v-btn>
-            <v-btn href="https://github.com/meteor-mogul"
-                   target="_blank">GitHub</v-btn>
-          </v-card-text>
-        </v-card>
-        <v-card>
-          <v-card-text>
-            <v-btn>Orientation</v-btn>
-            <v-btn>Survival Guide</v-btn>
-            <v-btn>Toolkit</v-btn>
-          </v-card-text>
-        </v-card>
-        <v-card>
-          <v-card-text>
-            <v-btn>Bestiary</v-btn>
-            <v-btn>Formulary</v-btn>
-            <v-btn>Menagerie</v-btn>
-          </v-card-text>
-        </v-card>
-        <v-card>
-          <v-card-text>
-            <v-btn>Bazaar</v-btn>
-            <v-btn>Forum</v-btn>
-            <v-btn>Observatory</v-btn>
-          </v-card-text>
-        </v-card>
+        <v-container>
+          <v-layout row wrap>
+            <v-flex>
+              <router-link to="/"><v-icon large>home</v-icon></router-link>
+              <!-- Use handlebars for displaying data. -->
+              {{ message }}
+              <!-- VueRouter gives us <router-link> tags that will be rendered
+                   as <a> tags by default. -->
+              <router-link to="/happy">Happy</router-link>
+              <router-link to="/sad">Sad</router-link>
+              <!-- VueRouter will replace <router-view> based on route. -->
+              <router-view></router-view>
+            </v-flex>
+          </v-layout>
+          <v-layout row wrap justify-center mb-3>
+            <v-flex xs12 sm6 md4>
+              <v-expansion-panel dark popout>
+                <v-expansion-panel-content>
+                  <div slot="header">Quick Start <v-icon>directions_run</v-icon></div>
+                  <v-card>
+                    <v-card-text class="grey lighten-3 black--text">
+                      <ol>
+                        <li>Install <a href="https://git-scm.com/" target="_blank"><code>git</code></a> if necessary (on MacOS you probably already have it).</li>
+                        <li>Install <a href="https://www.meteor.com/" target="_blank"><code>meteor</code></a>.</li>
+                        <li>From a shell, clone and launch a Meteor Mogul app. For example:<br />
+                          <code>
+ $ git clone https://github.com/meteor-mogul/mogul-helloworld.git/
+ $ cd mogul-helloworld
+ $ meteor npm install
+ $ meteor
+                          </code></li>
+                      </ol>
+                    </v-card-text>
+                  </v-card>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-flex>
+            <v-flex xs12 sm3 md2>
+              <v-btn href="https://github.com/meteor-mogul"
+                     target="_blank" style="text-transform: none !important;">GitHub</v-btn>
+            </v-flex>
+          </v-layout>
+          <v-layout row wrap justify-center>
+              <v-btn>Orientation</v-btn>
+              <v-btn>Survival Guide</v-btn>
+              <v-btn>Toolkit</v-btn>
+          </v-layout>
+          <v-layout row wrap justify-center>
+              <v-btn>Formulary</v-btn>
+              <v-btn>Bestiary</v-btn>
+              <v-btn>Menagerie</v-btn>
+          </v-layout>
+          <v-layout row wrap justify-center>
+              <v-btn>Bazaar</v-btn>
+              <v-btn>Forum</v-btn>
+              <v-btn>Observatory</v-btn>
+          </v-layout>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+          <div>scroll me</div>
+        </v-container>
       </v-content>
       <v-footer app inset height="auto">
         <v-container fluid fill-height>
