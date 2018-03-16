@@ -11,12 +11,7 @@
   <!-- Wrap Vuetify app in a <v-app> tag. -->
   <script type="text/x-template" id="app-template">
     <v-app id="mm-app">
-      <v-navigation-drawer
-        app
-        v-model="visibleDrawer"
-        >
-        <div>Quick Links</div>
-      </v-navigation-drawer>
+      <mm-navdrawer></mm-navdrawer>
       <mm-toolbar></mm-toolbar>
       <v-content app>
         <v-container>

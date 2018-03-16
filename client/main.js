@@ -5,6 +5,7 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
 import { Vue } from './imports.js';
 import { drawerMixin } from './mixins.js';
+import { mmNavdrawer } from './navdrawer.js';
 import { mmToolbar } from './toolbar.js';
 
 Meteor.startup(() => {
@@ -16,7 +17,8 @@ Meteor.startup(() => {
 mmVue = new Vue({
     template: '#app-template',
     components: {
-      'mm-toolbar': mmToolbar
+      'mm-toolbar': mmToolbar,
+      'mm-navdrawer': mmNavdrawer
     },
     data: function() {
       return {
