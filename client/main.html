@@ -11,20 +11,14 @@
   <!-- Wrap Vuetify app in a <v-app> tag. -->
   <script type="text/x-template" id="app-template">
     <v-app>
-      <v-navigation-drawer app>
+      <v-navigation-drawer
+        app
+        v-model="visibleDrawer"
+        >
         <div>Quick Links</div>
       </v-navigation-drawer>
-      <v-toolbar app dark color="primary">
-        <v-toolbar-side-icon></v-toolbar-side-icon>
-        <v-toolbar-title>Welcome to Meteor Mogul!</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn>Learn</v-btn>
-          <v-btn>Play</v-btn>
-          <v-btn>Create</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-      <v-content>
+      <mm-toolbar></mm-toolbar>
+      <v-content app>
         <v-card>
           <!-- Use handlebars for displaying data. -->
           <v-card-text>
@@ -67,19 +61,27 @@
           </v-card-text>
         </v-card>
       </v-content>
-      <v-footer app>
-      <v-toolbar>
-        <v-toolbar-title>Code your own personal and demo apps with Meteor + VueJS + Material Design (Vuetify)</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <a href="https://meteor-mogul.github.io/"
-             target="_blank">About Meteor Mogul</a>
-          &bull;
-          <a>Donations Accepted!</a>
-          &bull;
-          <a>Help Wanted</a>
-        </v-toolbar-items>
-      </v-toolbar>
+      <v-footer app inset height="auto">
+        <v-container fluid fill-height>
+          <v-layout child-flex>
+            <v-card flat fluid tile>
+              <v-card-title class="primary white--text">
+                <strong class="subheading">Code your own personal and demo apps with Meteor + VueJS + Material Design (Vuetify)</strong>
+              </v-card-title>
+              <v-card-text class="grey lighten-3 text-xs-center">
+                <a href="https://meteor-mogul.github.io/"
+                   target="_blank">About Meteor Mogul</a>
+                &bull;
+                <a>Donations Accepted!</a>
+                &bull;
+                <a>Help Wanted</a>
+              </v-card-text>
+              <v-card-actions class="grey lighten-2 justify-center">
+                &copy;2018 — <strong>Meteor Mogul</strong>
+              </v-card-actions>
+            </v-card>
+          </v-layout>
+        </v-container>
       </v-footer>
     </v-app>
   </script>

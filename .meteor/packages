@@ -16,3 +16,6 @@ meteormogul:vue-dist                    # VueJS JavaScript framework (replaces B
 meteormogul:vuetify-dist                # Vuetify CSS framework (Material Design)
 meteormogul:material-design-icons-fonts # Material Icons font
 meteormogul:vue-router-dist             # Vue Router
+
+session                                 # Session
+tracker                                 # Meteor's client-side reactive programming library

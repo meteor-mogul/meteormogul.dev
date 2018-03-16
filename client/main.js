@@ -1,10 +1,21 @@
 // Create a Vue instance that uses Vuetify and Vue Router
 
 // First, import symbols from packages.
+import { Meteor } from 'meteor/meteor';
 import { Vue } from 'meteor/meteormogul:vue-dist';
 import { Vuetify } from 'meteor/meteormogul:vuetify-dist';
 import { VueRouter } from 'meteor/meteormogul:vue-router-dist';
+import { Session } from 'meteor/session';
+import VueMeteorTracker from 'vue-meteor-tracker';
+import { mmMixin } from './mixins.js';
+import { mmToolbar } from './toolbar.js';
 
+Meteor.startup(() => {
+  // code to run on client at startup
+  Session.set('visibleDrawer', false);
+});
+
+Vue.use(VueMeteorTracker);
 // Use Vuetify for style and UI widgets.
 Vue.use(Vuetify);
 
@@ -35,10 +46,13 @@ const router = new VueRouter({
 // This Vue instance uses the template with id="app-template".
 // We're getting fancy with the $mount API.
 // See https://vuejs.org/v2/api/#vm-mount
-vm = new Vue({
+mmVue = new Vue({
     router,
     template: '#app-template',
-    data: {
-      message: 'Getting started...'
-    }
+    data: function() {
+      return {
+        message: 'Getting started...'
+      };
+    },
+    mixins: [mmMixin]
 }).$mount('#app');
