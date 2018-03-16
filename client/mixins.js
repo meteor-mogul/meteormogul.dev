@@ -1,6 +1,8 @@
 import { Session } from 'meteor/session';
+import { mmRouter } from './routes.js';
 
-var mmMixin = {
+// Define data and methods in one place, used by multiple Vue components
+var drawerMixin = {
 
   data: function() {
     return {
@@ -24,8 +26,9 @@ var mmMixin = {
     hideDrawer: function () {
       Session.set('visibleDrawer', false);
     }
-  }
+  },
+  router: mmRouter
 
 }
 
-export { mmMixin };
+export { drawerMixin };
