@@ -10,10 +10,10 @@ var mmToolbar =
   mixins: [drawerMixin],
   data: () => ({
       documentation: [
-        { title: 'Orientation', href: '/happy' },
-        { title: 'Survival Guide', href: '/sad' },
-        { title: 'Toolkit', href: '/happy' },
-        { title: 'Formulary', href: '/' }
+        { title: 'Orientation', href: '/orientation' },
+        { title: 'Survival Guide', href: '/survivalguide' },
+        { title: 'Toolkit', href: '/toolkit' },
+        { title: 'Formulary', href: '/formulary' }
       ],
       demos: [
         { title: 'Hello, world!', href: 'https://meteor-mogul-hello-world.herokuapp.com/'},

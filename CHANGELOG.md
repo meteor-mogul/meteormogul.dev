@@ -1,5 +1,10 @@
 # Changelog for meteormogul.dev
 
+## [0.0.6] - 2018-03-16
+
+- Subtle issues with Navigation Drawer
+- Splash screen
+
 ## [0.0.5] - 2018-03-16
 
 - Navigation Drawer

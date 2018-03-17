@@ -1,20 +1,32 @@
 <body>
   <script type="text/x-template" id="mm-navdrawer-template">
+    <!-- Not using v-model here because different things need to happen based on
+         whether we are getting or setting visibleDrawer.
+         visibleDrawer is a reactive Session variable to make it easier to toggle
+         display of navigation drawer from any component, such as the toolbar.
+         The navigation drawer itself, however, can also toggle its state by
+         receiving a true or false input.  The recordDrawer method captures that
+         event and does a Session.set so that other components know the state
+         of the navigation drawer.
+       -->
     <v-navigation-drawer
     app
-    v-model="visibleDrawer"
+    clipped
+    :value="visibleDrawer"
+    @input="recordDrawer($event)"
     >
+      <mm-quickstart></mm-quickstart>
       <v-list>
         <v-subheader inset>Documentation</v-subheader>
         <v-list-tile v-for="doc in documentation" :key="doc.title">
           <v-list-tile-title><router-link :to="doc.href">{{ doc.title }}</router-link></v-list-tile-title>
         </v-list-tile>
         <v-subheader inset>Heroku Demos</v-subheader>
-        <v-list-tile v-for="demo in demos" :key="demo.title">
+        <v-list-tile v-for="demo in demos" :key="demo.href">
           <v-list-tile-title><a :href="demo.href" target="_blank">{{ demo.title }}</a></v-list-tile-title>
         </v-list-tile>
         <v-subheader inset>GitHub Repos</v-subheader>
-        <v-list-tile v-for="repo in repos" :key="repo.title">
+        <v-list-tile v-for="repo in repos" :key="repo.href">
           <v-list-tile-title><a :href="repo.href" target="_blank">{{ repo.title }}</a></v-list-tile-title>
         </v-list-tile>
       </v-list>

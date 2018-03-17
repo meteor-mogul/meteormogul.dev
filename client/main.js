@@ -7,6 +7,7 @@ import { Vue } from './imports.js';
 import { drawerMixin } from './mixins.js';
 import { mmNavdrawer } from './navdrawer.js';
 import { mmToolbar } from './toolbar.js';
+import { mmQuickStart } from './quickstart.js';
 
 Meteor.startup(() => {
   // code to run on client at startup
@@ -18,11 +19,13 @@ mmVue = new Vue({
     template: '#app-template',
     components: {
       'mm-toolbar': mmToolbar,
-      'mm-navdrawer': mmNavdrawer
+      'mm-navdrawer': mmNavdrawer,
+      'mm-quickstart': mmQuickStart
     },
     data: function() {
       return {
-        message: 'Getting started...'
+        message: 'Getting started...',
+        samecase: "text-transform: none !important;"
       };
     },
     // Get common data and methods

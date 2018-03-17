@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-menu open-on-hover bottom offset-y>
-          <v-btn slot="activator">Learn</v-btn>
+          <v-btn slot="activator" style="text-transform: none !important;">Learn</v-btn>
           <v-list>
             <v-subheader inset>Documentation</v-subheader>
             <v-list-tile v-for="doc in documentation" :key="doc.title">
@@ -17,19 +17,19 @@
           </v-list>
         </v-menu>
         <v-menu open-on-hover bottom offset-y>
-          <v-btn slot="activator">Play</v-btn>
+          <v-btn slot="activator" style="text-transform: none !important;">Play</v-btn>
           <v-list>
             <v-subheader inset>Heroku Demos</v-subheader>
-            <v-list-tile v-for="demo in demos" :key="demo.title">
+            <v-list-tile v-for="demo in demos" :key="demo.href">
               <v-list-tile-title><a :href="demo.href" target="_blank">{{ demo.title }}</a></v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
         <v-menu open-on-hover bottom offset-y>
-          <v-btn slot="activator">Create</v-btn>
+          <v-btn slot="activator" style="text-transform: none !important;">Create</v-btn>
           <v-list>
             <v-subheader inset>GitHub Repos</v-subheader>
-            <v-list-tile v-for="repo in repos" :key="repo.title">
+            <v-list-tile v-for="repo in repos" :key="repo.href">
               <v-list-tile-title><a :href="repo.href" target="_blank">{{ repo.title }}</a></v-list-tile-title>
             </v-list-tile>
           </v-list>
