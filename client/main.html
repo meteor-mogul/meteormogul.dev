@@ -1,4 +1,4 @@
-<body>
+<body class="hiddenDrawer">
 
   <!-- Render target for Vue app.  Use id to identify. -->
   <div id="app"></div>
@@ -10,7 +10,7 @@
   <!-- <v-*> HTML tags are Vuetify components. -->
   <!-- Wrap Vuetify app in a <v-app> tag. -->
   <script type="text/x-template" id="app-template">
-    <v-app id="mm-app">
+    <v-app id="mm-app" :class="{ hiddenDrawer: visibleDrawer }">
       <mm-navdrawer></mm-navdrawer>
       <mm-toolbar></mm-toolbar>
       <v-content app>
@@ -29,7 +29,7 @@
               <v-card>
                 <v-card-media src="/img/debbie-frith-564432-unsplash.jpg" height="256px"></v-card-media>
                 <v-card-text>
-                  <p>Meteor Mogul is a hobby project for learning Meteor, VueJS and Vuetify to create apps for friends and family.  I hope Meteor Mogul saves you some time and makes your coding explorations more exciting and fun!</p>
+                  <p>Meteor Mogul is a hobby project for learning Meteor, VueJS and Vuetify to create apps for friends and family.  I hope Meteor Mogul saves you some time and makes your coding explorations more exciting and fun! - <span style="font-style: italic">Fred</span></p>
                   <mm-quickstart></mm-quickstart>
                 </v-card-text>
                 <v-card-actions></v-card-actions>
@@ -38,56 +38,45 @@
           </v-layout>
           <v-layout v-if="!visibleDrawer">
             <v-flex>
-              <v-layout row wrap justify-center mb-3>
-                <v-flex xs12 sm6 md4>
-                  <mm-quickstart></mm-quickstart>
-                </v-flex>
-                <v-flex xs12 sm3 md2>
-                  <v-btn href="https://github.com/meteor-mogul"
-                         target="_blank" :style="samecase">GitHub</v-btn>
-                </v-flex>
-              </v-layout>
-              <v-layout row wrap justify-center>
-                  <v-btn :style="samecase">Orientation</v-btn>
-                  <v-btn :style="samecase">Survival Guide</v-btn>
-                  <v-btn :style="samecase">Toolkit</v-btn>
-              </v-layout>
-              <v-layout row wrap justify-center>
-                  <v-btn :style="samecase">Formulary</v-btn>
-                  <v-btn :style="samecase">Bestiary</v-btn>
-                  <v-btn :style="samecase">Menagerie</v-btn>
-              </v-layout>
-              <v-layout row wrap justify-center>
-                  <v-btn :style="samecase">Bazaar</v-btn>
-                  <v-btn :style="samecase">Forum</v-btn>
-                  <v-btn :style="samecase">Observatory</v-btn>
-              </v-layout>
+              <v-parallax src="/img/debbie-frith-564432-unsplash.jpg">
+                <v-layout row wrap>
+                  <v-flex style="background: rgba(0,0,0,0.40)"
+                  class="text-xs-right" px-2>
+                    <h1>Meteor Mogul</h1>
+                    <h2>Alta release</h2>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                  <v-flex>
+                    <mm-quickstart></mm-quickstart>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                    <v-btn :style="samecase">Orientation</v-btn>
+                    <v-btn :style="samecase">Survival Guide</v-btn>
+                    <v-btn :style="samecase">Toolkit</v-btn>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                    <v-btn :style="samecase">Formulary</v-btn>
+                    <v-btn :style="samecase">Bestiary</v-btn>
+                    <v-btn :style="samecase">Menagerie</v-btn>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                    <v-btn :style="samecase">Bazaar</v-btn>
+                    <v-btn :style="samecase">Forum</v-btn>
+                    <v-btn :style="samecase">Observatory</v-btn>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                    <v-btn href="https://github.com/meteor-mogul"
+                           target="_blank" :style="samecase"
+                           round>GitHub</v-btn>
+                </v-layout>
+              </v-parallax>
             </v-flex>
           </v-layout>
         </v-container>
       </v-content>
-      <v-footer app inset height="auto">
-        <v-container fluid fill-height>
-          <v-layout child-flex>
-            <v-card flat fluid tile>
-              <v-card-title class="primary white--text">
-                <strong class="subheading">Code your own personal and demo apps with Meteor + VueJS + Material Design (Vuetify)</strong>
-              </v-card-title>
-              <v-card-text class="grey lighten-3 text-xs-center">
-                <a href="https://meteor-mogul.github.io/"
-                   target="_blank">About Meteor Mogul</a>
-                &bull;
-                <a>Donations Accepted!</a>
-                &bull;
-                <a>Help Wanted</a>
-              </v-card-text>
-              <v-card-actions class="grey lighten-2 justify-center">
-                &copy;2018 — <strong>Meteor Mogul</strong>
-              </v-card-actions>
-            </v-card>
-          </v-layout>
-        </v-container>
-      </v-footer>
+      <mm-footer></mm-footer>
     </v-app>
   </script>
 

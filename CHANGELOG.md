@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.7] - 2018-03-17
+
+- Background image
+
 ## [0.0.6] - 2018-03-16
 
 - Subtle issues with Navigation Drawer

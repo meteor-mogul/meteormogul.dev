@@ -1,6 +1,6 @@
 // Declare templates for routes.
 // Templates must have one enclosing tag.
-const HomePage = { template: '<span><v-icon>mood</v-icon> Home Page</span'};
+const HomePage = { template: '<span><v-icon>mood</v-icon> Home Page</span>'};
 const Orientation = { template: '<span><v-icon>mood</v-icon> Orientation</span>'};
 const SurvivalGuide = { template: '<span><v-icon>mood_bad</v-icon> Survival Guide</span>'};
 const Toolkit = { template: '<span><v-icon>mood_bad</v-icon> Toolkit</span>'};
