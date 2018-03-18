@@ -1,0 +1,13 @@
+<body>
+  <script type="text/x-template" id="mm-menu-create-template">
+    <v-menu open-on-hover bottom offset-y>
+      <v-btn slot="activator" style="text-transform: none !important;">Create</v-btn>
+      <v-list>
+        <v-subheader inset>GitHub Repos</v-subheader>
+        <v-list-tile v-for="repo in repos" :key="repo.href">
+          <v-list-tile-title><a :href="repo.href" target="_blank">{{ repo.title }}</a></v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+  </script>
+</body>

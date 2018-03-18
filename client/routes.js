@@ -6,7 +6,8 @@ const SurvivalGuide = { template: '<span><v-icon>mood_bad</v-icon> Survival Guid
 const Toolkit = { template: '<span><v-icon>mood_bad</v-icon> Toolkit</span>'};
 
 // Declare Happy and Sad routes...
-const routes = [
+const routes =
+[
   { path: '/', component: HomePage },
   { path: '/orientation', component: Orientation },
   { path: '/survivalguide', component: SurvivalGuide },
@@ -14,7 +15,8 @@ const routes = [
 ];
 
 // ... then add them to the router ...
-const mmRouter = new VueRouter({
+const mmRouter =
+new VueRouter({
   routes // short for `routes: routes`
 });
 

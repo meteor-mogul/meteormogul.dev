@@ -1,0 +1,13 @@
+<body>
+  <script type="text/x-template" id="mm-menu-learn-template">
+    <v-menu open-on-hover bottom offset-y>
+        <v-btn slot="activator" style="text-transform: none !important;">Learn</v-btn>
+        <v-list>
+          <v-subheader inset>Documentation</v-subheader>
+          <v-list-tile v-for="doc in docs" :key="doc.title">
+            <v-list-tile-title><router-link :to="doc.href">{{ doc.title }}</router-link></v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+  </script>
+</body>

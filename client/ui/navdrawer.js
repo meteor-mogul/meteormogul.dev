@@ -1,9 +1,12 @@
 // Create a Vue component for the navigation drawer
 
 // First, import symbols from packages.
-import { drawerMixin } from './mixins.js';
 import { Session } from 'meteor/session';
+// MM
+import { drawerMixin } from '../mixins.js';
+// UI
 import { mmQuickStart } from './quickstart.js';
+import { mmListDocs } from '../api/lists/docs.js';
 
 var mmNavdrawer =
 {
@@ -15,12 +18,7 @@ var mmNavdrawer =
   },
   data: () => ({
       drawer: false,
-      documentation: [
-        { title: 'Orientation', href: '/orientation' },
-        { title: 'Survival Guide', href: '/survivalguide' },
-        { title: 'Toolkit', href: '/toolkit' },
-        { title: 'Formulary', href: '/formulary' }
-      ],
+      docs: mmListDocs,
       demos: [
         { title: 'Hello, world!', href: 'https://meteor-mogul-hello-world.herokuapp.com/'},
         { title: 'Meteor Mogul Vue Intro', href: 'https://meteor-mogul-vue-intro.herokuapp.com/'}

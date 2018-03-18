@@ -1,10 +1,10 @@
 # Bugs in meteormogul.dev and Where to Find Them
 
-For all the gory details about various bugs and other nasties, see the [GitHub Issue tracker](https://github.com/meteor-mogul/meteormogul.dev/issues).
+For all the gory details about bugs and other nasties, see the [GitHub Issue tracker](https://github.com/meteor-mogul/meteormogul.dev/issues).
 
 Filter by `label:bug`.
 
-## Particularly Pestiferous, Pestilential and Pernicious
+## Particularly Pestiferous, Pestilential and Pernicious Pests
 
 Last update: March 17, 2018
 

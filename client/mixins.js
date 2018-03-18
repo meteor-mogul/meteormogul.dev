@@ -2,33 +2,59 @@ import { Session } from 'meteor/session';
 import { mmRouter } from './routes.js';
 
 // Define data and methods in one place, used by multiple Vue components
-var drawerMixin = {
+var drawerMixin =
+{
 
-  data: function() {
+  data:
+  function () {
     return {
       visibleDrawer: false
     };
   },
-  meteor: {
-    visibleDrawer: {
-      update () {
+
+  meteor:
+  {
+    visibleDrawer:
+    {
+      update() {
         return Session.get('visibleDrawer');
       }
     }
   },
-  methods: {
-    toggleDrawer: function () {
+
+  methods:
+  {
+    toggleDrawer:
+    function () {
       Session.set('visibleDrawer', !Session.get('visibleDrawer'));
     },
-    showDrawer: function () {
+
+    showDrawer:
+    function () {
       Session.set('visibleDrawer', true);
     },
-    hideDrawer: function () {
+
+    hideDrawer:
+    function () {
       Session.set('visibleDrawer', false);
     }
   },
-  router: mmRouter
 
-}
+  router:
+  mmRouter
+
+};
+
+var samecaseMixin =
+{
+
+  data:
+  function () {
+    return {
+      samecase: "text-transform: none !important;"
+    };
+  }
+
+};
 
 export { drawerMixin };

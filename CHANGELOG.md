@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.9] - 2018-03-17
+
+- Application structure
+
 ## [0.0.8] - 2018-03-17
 
 - .docs folder

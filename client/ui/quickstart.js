@@ -1,7 +1,7 @@
 // Create a Vue component for the QuickStart expansion panel
 
 // First, import symbols from packages.
-import { drawerMixin } from './mixins.js';
+import { drawerMixin } from '../mixins.js';
 
 var mmQuickStart =
 {

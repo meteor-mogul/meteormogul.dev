@@ -1,13 +1,1 @@
 /* CSS declarations go here */
-.hiddenDrawer {
-  /* The image used */
-  background-image: url("/img/debbie-frith-564432-unsplash.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
