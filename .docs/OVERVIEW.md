@@ -43,6 +43,20 @@ public/                   # other assets besides .html, .css, and .js files
 server/                   # code that runs on server only
 ```
 
+## Debugging
+
+First, get [Vue.js devtools](https://github.com/vuejs/vue-devtools).
+
+I find Chrome to be the most dependable browser to use for development; there is a Vue.js devtools extension for Chrome.  Once you add it, you'll see it at the very right of the developer tools tabs (Elements, Console, Sources, ..., Vue).
+
+In addition to all the help you get from this and all the regular JavaScript debugging built into Chrome, I still find it is helpful to add console logging from time to time.
+
+So I set `MMDEBUG` in `client/debug.js`.  The `imports.js` file imports this symbol from `debug.js` and re-exports it, so all other code can just import the symbol from `imports.js`.  When `true`, `MMDEBUG` turns on the console logging debug statements I've sprinkled through the code in places that have caused me heartache.  E.g.,
+
+```js
+MMDEBUG && console.log("mmContentHome defined in home.js:", mmContentHome);
+```
+
 ## Vue Components
 
 Each Vue instance and component is defined by one `.html` file that contains its template, inside `<script type="text/x-template" id="name">`, and one `.js` file that contains its code.
@@ -53,7 +67,7 @@ Rather than registering components globablly with `Vue.component()`, I use local
 
 For example, here is the definition of the main Vue instance, locally registering components for navigation drawer, toolbar, content and footer:
 
-```
+```js
 // Create the Vue instance
 var mmVue = new Vue({
     template: '#mm-app-template',
@@ -76,23 +90,29 @@ Common code that multiple vue components need is defined as [mixins](https://vue
 
 For example, to allow multiple components to show or hide the navigation drawer, here is the drawerMixin from `mixins.js`:
 
-```
+```js
 // Define data and methods in one place, used by multiple Vue components
-var drawerMixin = {
+var drawerMixin =
+{
 
-  data: function() {
+  data:
+  function() {
     return {
       visibleDrawer: false
     };
   },
-  meteor: {
+
+  meteor:
+  {
     visibleDrawer: {
       update () {
         return Session.get('visibleDrawer');
       }
     }
   },
-  methods: {
+
+  methods:
+  {
     toggleDrawer: function () {
       Session.set('visibleDrawer', !Session.get('visibleDrawer'));
     },
@@ -103,12 +123,11 @@ var drawerMixin = {
       Session.set('visibleDrawer', false);
     }
   },
-  router: mmRouter
 
 }
 ```
 
-That mixin also injects the router, so every component that gets the drawerMixin can also do routing.
+NOTE: While it is tempting to use that mixin to also injects the router, so every component that gets the drawerMixin can also do routing, this leads to circular imports and a P5 Bug.  See "Circular Import Dependencies" in BUGS.
 
 ## Routing
 

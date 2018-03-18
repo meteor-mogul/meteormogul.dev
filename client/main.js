@@ -3,7 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
 // MM
 import { Vue } from './imports.js';
-import { drawerMixin } from './mixins.js';
+import { drawerMixin, samecaseMixin } from './mixins.js';
+import { mmRouter } from './routes.js';
 // UI
 import { mmNavdrawer } from './ui/navdrawer.js';
 import { mmToolbar } from './ui/toolbar.js';
@@ -19,9 +20,11 @@ Meteor.startup(() => {
 var mmVue =
 new Vue({
 
-    template: '#mm-app-template',
+    template:
+    '#mm-app-template',
 
-    components: {
+    components:
+    {
       'mm-navdrawer': mmNavdrawer,
       'mm-toolbar': mmToolbar,
       'mm-content': mmContent,
@@ -29,7 +32,14 @@ new Vue({
     },
 
     // Get common data and methods
-    mixins: [drawerMixin]
+    mixins:
+    [
+      drawerMixin, samecaseMixin
+    ],
+
+    // Inject router
+    router:
+    mmRouter
 
   // We're getting fancy with the $mount API.
   // See https://vuejs.org/v2/api/#vm-mount

@@ -5,16 +5,30 @@ import { mmQuickStart } from './quickstart.js';
 
 var mmContent =
 {
-  name: 'mm-content',
-  template: '#mm-content-template',
-  mixins: [drawerMixin],
-  components: {
+  name:
+  'mm-content',
+
+  template:
+  '#mm-content-template',
+
+  mixins:
+  [
+    drawerMixin
+  ],
+
+  components:
+  {
     'mm-quickstart': mmQuickStart
   },
-  data: () => ({
-      message: 'Getting started...',
+
+  data:
+  function () {
+    return {
+      breadcrumbs: 'Breadcrumbs go here...',
       samecase: "text-transform: none !important;"
-    })
+    };
+  }
+
 };
 
 export { mmContent };

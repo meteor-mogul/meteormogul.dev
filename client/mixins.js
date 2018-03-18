@@ -1,5 +1,4 @@
 import { Session } from 'meteor/session';
-import { mmRouter } from './routes.js';
 
 // Define data and methods in one place, used by multiple Vue components
 var drawerMixin =
@@ -38,13 +37,14 @@ var drawerMixin =
     function () {
       Session.set('visibleDrawer', false);
     }
-  },
-
-  router:
-  mmRouter
+  }
 
 };
 
+// By default button text is all UPPERCASE in Vuetify, but I want to
+// control the case of my button text.
+// This mixin allows me to do :style="samecase" so the buttons will
+// not have any text transforms applied to them.
 var samecaseMixin =
 {
 
@@ -57,4 +57,4 @@ var samecaseMixin =
 
 };
 
-export { drawerMixin };
+export { drawerMixin, samecaseMixin };

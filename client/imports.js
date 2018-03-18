@@ -16,5 +16,7 @@ Vue.use(Vuetify);
 // provide app functionality.
 Vue.use(VueRouter);
 
-// Export this Vue
-export { Vue };
+// Debug flag
+import { MMDEBUG } from './debug.js';
+
+export { Vue, MMDEBUG };

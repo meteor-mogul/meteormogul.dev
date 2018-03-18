@@ -1,17 +1,27 @@
 // Create a Vue component for the documentation menu
-
-// First, import symbols from packages.
-import { drawerMixin } from '../../mixins.js';
+import { drawerMixin, samecaseMixin } from '../../mixins.js';
+// List of documentation on this web site
 import { mmListDocs } from '../../api/lists/docs.js';
 
 var mmMenuLearn =
 {
-  name: 'mm-menu-learn',
-  template: '#mm-menu-learn-template',
-  mixins: [drawerMixin],
-  data: () => ({
+  name:
+  'mm-menu-learn',
+
+  template:
+  '#mm-menu-learn-template',
+
+  mixins:
+  [
+    drawerMixin, samecaseMixin
+  ],
+
+  data:
+  function () {
+    return {
       docs: mmListDocs
-    })
+    };
+  }
 };
 
 export { mmMenuLearn };

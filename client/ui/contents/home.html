@@ -1,0 +1,67 @@
+<body>
+
+  <script type="text/x-template" id="mm-content-home-template">
+    <v-layout>
+      <v-flex>
+          <v-layout v-if="visibleDrawer">
+            <v-flex>
+              <v-card>
+                <v-card-media src="/img/debbie-frith-564432-unsplash.jpg" height="256px"></v-card-media>
+                <v-card-text>
+                  <p>Meteor Mogul is a hobby project for learning Meteor, VueJS and Vuetify to create apps for friends and family.  I hope Meteor Mogul saves you some time and makes your coding explorations more exciting and fun! - <span style="font-style: italic">Fred</span></p>
+                  <mm-quickstart></mm-quickstart>
+                </v-card-text>
+                <v-card-actions></v-card-actions>
+              </v-card>
+            </v-flex>
+          </v-layout>
+          <v-layout v-if="!visibleDrawer">
+            <v-flex>
+              <v-parallax
+              src="/img/debbie-frith-564432-unsplash.jpg">
+                <v-layout row wrap>
+                  <v-flex style="background: rgba(0,0,0,0.40)"
+                  class="text-xs-right" px-2>
+                    <h1>Meteor Mogul</h1>
+                    <h2>Alta release</h2>
+                  </v-flex>
+                </v-layout>
+                <v-layout
+                row wrap justify-center>
+                  <v-flex>
+                    <mm-quickstart></mm-quickstart>
+                  </v-flex>
+                </v-layout>
+                <v-layout
+                row wrap justify-center
+                v-for="row in rows" :key="row.name">
+                    <router-link
+                    v-for="dest in row.row"
+                    :key="dest.href"
+                    :to="dest.href">
+                      <v-tooltip bottom>
+                        <v-btn round
+                        :style="samecase"
+                        slot="activator">{{ dest.title }}</v-btn>
+                        <span>{{ dest.tooltip }}</span>
+                      </v-tooltip>
+                    </router-link>
+                </v-layout>
+                <v-layout row wrap justify-center>
+                  <v-tooltip bottom>
+                    <v-btn
+                    href="https://github.com/meteor-mogul"
+                    target="_blank" :style="samecase"
+                    slot="activator"
+                    round>GitHub</v-btn>
+                    <span>Meteor Mogul code repos</span>
+                  </v-tooltip>
+                </v-layout>
+              </v-parallax>
+            </v-flex>
+          </v-layout>
+      </v-flex>
+    </v-layout>
+  </script>
+
+</body>

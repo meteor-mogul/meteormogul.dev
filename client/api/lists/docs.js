@@ -1,8 +1,6 @@
 // List of documentation
-
 // title: Name of document
 // href: Route to document
-
 var mmListDocs =
 [
   { title: 'Orientation', href: '/orientation' },

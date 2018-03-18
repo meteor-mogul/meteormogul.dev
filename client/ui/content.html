@@ -10,74 +10,11 @@
                 <span>Return to Home Page</span>
               </v-tooltip></router-link>
               <!-- Use handlebars for displaying data. -->
-              {{ message }}
+              {{ breadcrumbs }}
               <!-- VueRouter will replace <router-view> based on route. -->
-              <router-view></router-view>
             </v-flex>
           </v-layout>
-          <v-layout v-if="visibleDrawer">
-            <v-flex>
-              <v-card>
-                <v-card-media src="/img/debbie-frith-564432-unsplash.jpg" height="256px"></v-card-media>
-                <v-card-text>
-                  <p>Meteor Mogul is a hobby project for learning Meteor, VueJS and Vuetify to create apps for friends and family.  I hope Meteor Mogul saves you some time and makes your coding explorations more exciting and fun! - <span style="font-style: italic">Fred</span></p>
-                  <mm-quickstart></mm-quickstart>
-                </v-card-text>
-                <v-card-actions></v-card-actions>
-              </v-card>
-            </v-flex>
-          </v-layout>
-          <v-layout v-if="!visibleDrawer">
-            <v-flex>
-              <v-parallax src="/img/debbie-frith-564432-unsplash.jpg">
-                <v-layout row wrap>
-                  <v-flex style="background: rgba(0,0,0,0.40)"
-                  class="text-xs-right" px-2>
-                    <h1>Meteor Mogul</h1>
-                    <h2>Alta release</h2>
-                  </v-flex>
-                </v-layout>
-                <v-layout row wrap justify-center>
-                  <v-flex>
-                    <mm-quickstart></mm-quickstart>
-                  </v-flex>
-                </v-layout>
-                <v-layout row wrap justify-center>
-                    <v-btn :style="samecase"
-                    round>Orientation</v-btn>
-                    <v-btn :style="samecase"
-                    round>Survival Guide</v-btn>
-                    <v-btn :style="samecase"
-                    round>Toolkit</v-btn>
-                </v-layout>
-                <v-layout row wrap justify-center>
-                    <v-btn :style="samecase"
-                    round>Formulary</v-btn>
-                    <v-btn :style="samecase"
-                    round>Bestiary</v-btn>
-                    <v-btn :style="samecase"
-                    round>Menagerie</v-btn>
-                </v-layout>
-                <v-layout row wrap justify-center>
-                    <v-btn :style="samecase"
-                    round>Bazaar</v-btn>
-                    <v-btn :style="samecase"
-                    round>Forum</v-btn>
-                    <v-btn :style="samecase"
-                    round>Observatory</v-btn>
-                </v-layout>
-                <v-layout row wrap justify-center>
-                  <v-tooltip bottom>
-                    <v-btn href="https://github.com/meteor-mogul"
-                           target="_blank" :style="samecase"
-                           slot="activator"
-                           round>GitHub</v-btn>
-                    <span>Meteor Mogul code repos</span>
-                  </v-tooltip>
-                </v-layout>
-              </v-parallax>
-            </v-flex>
-          </v-layout>
+          <router-view></router-view>
         </v-container>
       </v-content>
   </script>

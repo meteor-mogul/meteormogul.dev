@@ -1,17 +1,27 @@
-// Create a Vue component for the documentation menu
-
-// First, import symbols from packages.
-import { drawerMixin } from '../../mixins.js';
+// Create a Vue component for the repositories menu
+import { drawerMixin, samecaseMixin } from '../../mixins.js';
+// List of repositories on GitHub
 import { mmListRepos } from '../../api/lists/repos.js';
 
 var mmMenuCreate =
 {
-  name: 'mm-menu-create',
-  template: '#mm-menu-create-template',
-  mixins: [drawerMixin],
-  data: () => ({
+  name:
+  'mm-menu-create',
+
+  template:
+  '#mm-menu-create-template',
+
+  mixins:
+  [
+    drawerMixin, samecaseMixin
+  ],
+
+  data:
+  function () {
+    return {
       repos: mmListRepos
-    })
+    };
+  }
 };
 
 export { mmMenuCreate };

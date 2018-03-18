@@ -1,7 +1,7 @@
 <body>
   <script type="text/x-template" id="mm-menu-play-template">
     <v-menu open-on-hover bottom offset-y>
-      <v-btn slot="activator" style="text-transform: none !important;">Play</v-btn>
+      <v-btn slot="activator" :style="samecase">Play</v-btn>
       <v-list>
         <v-subheader inset>Heroku Demos</v-subheader>
         <v-list-tile v-for="demo in demos" :key="demo.href">
