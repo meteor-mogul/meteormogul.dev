@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.8] - 2018-03-17
+
+- .docs folder
+
 ## [0.0.7] - 2018-03-17
 
 - Background image

@@ -17,7 +17,10 @@
         <v-container>
           <v-layout row wrap>
             <v-flex>
-              <router-link to="/"><v-icon large>home</v-icon></router-link>
+              <router-link to="/"><v-tooltip right>
+                <v-icon large slot="activator">home</v-icon>
+                <span>Return to Home Page</span>
+              </v-tooltip></router-link>
               <!-- Use handlebars for displaying data. -->
               {{ message }}
               <!-- VueRouter will replace <router-view> based on route. -->
@@ -52,24 +55,37 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap justify-center>
-                    <v-btn :style="samecase">Orientation</v-btn>
-                    <v-btn :style="samecase">Survival Guide</v-btn>
-                    <v-btn :style="samecase">Toolkit</v-btn>
+                    <v-btn :style="samecase"
+                    round>Orientation</v-btn>
+                    <v-btn :style="samecase"
+                    round>Survival Guide</v-btn>
+                    <v-btn :style="samecase"
+                    round>Toolkit</v-btn>
                 </v-layout>
                 <v-layout row wrap justify-center>
-                    <v-btn :style="samecase">Formulary</v-btn>
-                    <v-btn :style="samecase">Bestiary</v-btn>
-                    <v-btn :style="samecase">Menagerie</v-btn>
+                    <v-btn :style="samecase"
+                    round>Formulary</v-btn>
+                    <v-btn :style="samecase"
+                    round>Bestiary</v-btn>
+                    <v-btn :style="samecase"
+                    round>Menagerie</v-btn>
                 </v-layout>
                 <v-layout row wrap justify-center>
-                    <v-btn :style="samecase">Bazaar</v-btn>
-                    <v-btn :style="samecase">Forum</v-btn>
-                    <v-btn :style="samecase">Observatory</v-btn>
+                    <v-btn :style="samecase"
+                    round>Bazaar</v-btn>
+                    <v-btn :style="samecase"
+                    round>Forum</v-btn>
+                    <v-btn :style="samecase"
+                    round>Observatory</v-btn>
                 </v-layout>
                 <v-layout row wrap justify-center>
+                  <v-tooltip bottom>
                     <v-btn href="https://github.com/meteor-mogul"
                            target="_blank" :style="samecase"
+                           slot="activator"
                            round>GitHub</v-btn>
+                    <span>Meteor Mogul code repos</span>
+                  </v-tooltip>
                 </v-layout>
               </v-parallax>
             </v-flex>

@@ -18,3 +18,7 @@ Publication steps:
 1.  Build web site as Meteor Mogul application, saving updates in this repo.
 2.  Use the `mogul-ssg.sh` script to create a static bundle of the app.
 3.  Push static SPA bundle to GitHub to publish on Netlify.
+
+## More
+
+See .docs folder.
