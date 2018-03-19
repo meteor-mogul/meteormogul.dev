@@ -26,7 +26,7 @@ One way to check is to `console.log` the variable immediately after you import i
 
 For example, the following mixin was a bad idea because I actually want to import components in `routes.js`.  If the mixin imports from `routes.js` and the component imports from `mixins.js` and then `routes.js` imports the component, we're in a circular dependency and things will fail silently.
 
-```
+```js
 // Define data and methods in one place, used by multiple Vue components
 var drawerMixin =
 {
@@ -67,3 +67,41 @@ var drawerMixin =
 
 }
 ```
+
+### camelCase vs. kebab-case
+
+The Vue.js docs explain the [camelCase vs. kebab-case issue](https://vuejs.org/v2/guide/components.html#camelCase-vs-kebab-case).
+
+Basically, use camelCase in your `.js` and `{{ interpolations }}` and kebab-case in naming your `.html` attributes for child component props.
+
+This will NOT work:
+
+```html
+<script type="text/x-template" id="mm-content-heading-template">
+  <h1>{{ content-title }}</h1>
+</script>
+```
+
+Vue will try to subtract the `title` prop from the `content` prop for the interpolation.
+
+But this will:
+
+```html
+<script type="text/x-template" id="mm-content-heading-template">
+  <h1>{{ contentTitle }}</h1>
+</script>
+```
+
+If the above is in a child component, you should not call it like this because HTML attributes are case-insensitive:
+
+```html
+<child-component contentTitle="Content Title Text"></child-component>
+```
+
+But you can call it like so:
+
+```html
+<child-component content-title="Content Title Text"></child-component>
+```
+
+Vue.js automatically translates between camelCase and kebab-case for you.

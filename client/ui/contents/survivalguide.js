@@ -4,13 +4,13 @@ import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
 
-var mmContentOrientation =
+var mmContentSurvivalGuide =
 {
   name:
-  'mm-content-orientation',
+  'mm-content-survivalguide',
 
   template:
-  '#mm-content-orientation-template',
+  '#mm-content-survivalguide-template',
 
   mixins:
   [
@@ -26,7 +26,7 @@ var mmContentOrientation =
 
 };
 
-MMDEBUG && console.log("mmContentOrientation defined in orientation.js:",
-mmContentOrientation);
+MMDEBUG && console.log("mmContentSurvivalGuide defined in survivalguide.js:",
+mmContentSurvivalGuide);
 
-export { mmContentOrientation };
+export { mmContentSurvivalGuide };

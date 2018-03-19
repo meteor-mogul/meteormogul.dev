@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.11] - 2018-03-18
+
+- Routing continued
+
 ## [0.0.10] - 2018-03-18
 
 - Routing started

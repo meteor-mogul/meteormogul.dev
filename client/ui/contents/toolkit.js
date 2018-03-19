@@ -4,13 +4,13 @@ import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
 
-var mmContentOrientation =
+var mmContentToolKit =
 {
   name:
-  'mm-content-orientation',
+  'mm-content-toolkit',
 
   template:
-  '#mm-content-orientation-template',
+  '#mm-content-toolkit-template',
 
   mixins:
   [
@@ -26,7 +26,7 @@ var mmContentOrientation =
 
 };
 
-MMDEBUG && console.log("mmContentOrientation defined in orientation.js:",
-mmContentOrientation);
+MMDEBUG && console.log("mmContentToolKit defined in toolkit.js:",
+mmContentToolKit);
 
-export { mmContentOrientation };
+export { mmContentToolKit };

@@ -24,7 +24,7 @@ var mmContent =
   data:
   function () {
     return {
-      breadcrumbs: 'Breadcrumbs go here...',
+      breadcrumbs: 'Home / Breadcrumbs go here...',
       samecase: "text-transform: none !important;"
     };
   }

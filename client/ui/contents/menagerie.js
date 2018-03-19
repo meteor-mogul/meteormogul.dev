@@ -4,13 +4,13 @@ import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
 
-var mmContentOrientation =
+var mmContentMenagerie =
 {
   name:
-  'mm-content-orientation',
+  'mm-content-menagerie',
 
   template:
-  '#mm-content-orientation-template',
+  '#mm-content-menagerie-template',
 
   mixins:
   [
@@ -26,7 +26,7 @@ var mmContentOrientation =
 
 };
 
-MMDEBUG && console.log("mmContentOrientation defined in orientation.js:",
-mmContentOrientation);
+MMDEBUG && console.log("mmContentMenagerie defined in menagerie.js:",
+mmContentMenagerie);
 
-export { mmContentOrientation };
+export { mmContentMenagerie };
