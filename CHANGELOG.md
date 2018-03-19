@@ -1,5 +1,10 @@
 # Changelog for meteormogul.dev
 
+## [0.0.13] - 2018-03-19
+
+- Markdown parser working
+- List margin style for markdown text
+
 ## [0.0.12] - 2018-03-19
 
 - Routing continued again

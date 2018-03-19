@@ -5,9 +5,7 @@
       <v-flex>
         <v-card>
           <mm-content-heading content-title="Orientation"></mm-content-heading>
-          <v-card-text>
-            <p>Orientation text</p>
-            <p>{{ marked('*Wow* does this work?') }}</p>
+          <v-card-text v-html="marked(mdText)">
           </v-card-text>
           <v-card-actions>Home | Next</v-card-actions>
         </v-card>

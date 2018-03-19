@@ -1,6 +1,8 @@
 import { Session } from 'meteor/session';
 import { Showdown } from 'meteor/markdown';
 
+//MMDEBUG = true;
+
 // Define data and methods in one place, used by multiple Vue components
 var drawerMixin =
 {
@@ -66,7 +68,10 @@ var markedMixin =
   {
     marked:
     function (text) {
-      return converter.makeHTML(text);
+      MMDEBUG && console.log("Text:", text);
+      MMDEBUG && console.log("Showdown converter:", converter);
+      MMDEBUG && console.log("Showdown converter.makeHtml:", converter.makeHtml);
+      return converter.makeHtml(text);
     }
   }
 };
