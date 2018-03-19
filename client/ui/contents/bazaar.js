@@ -4,19 +4,18 @@ import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
 
-var mmContentOrientation =
+var mmContentBazaar =
 {
   name:
-  'mm-content-orientation',
+  'mm-content-bazaar',
 
   template:
-  '#mm-content-orientation-template',
+  '#mm-content-bazaar-template',
 
   mixins:
   [
     drawerMixin,
-    samecaseMixin,
-    markedMixin
+    samecaseMixin
   ],
 
   components:
@@ -27,7 +26,7 @@ var mmContentOrientation =
 
 };
 
-MMDEBUG && console.log("mmContentOrientation defined in orientation.js:",
-mmContentOrientation);
+MMDEBUG && console.log("mmContentBazaar defined in bazaar.js:",
+mmContentBazaar);
 
-export { mmContentOrientation };
+export { mmContentBazaar };

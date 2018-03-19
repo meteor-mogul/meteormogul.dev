@@ -19,3 +19,4 @@ meteormogul:vue-router-dist             # Vue Router
 
 session                                 # Session
 tracker                                 # Meteor's client-side reactive programming library
+markdown                                # Showdown JS port of Markdown

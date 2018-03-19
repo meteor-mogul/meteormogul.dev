@@ -7,6 +7,9 @@ import { mmContentToolKit } from './ui/contents/toolkit.js';
 import { mmContentFormulary } from './ui/contents/formulary.js';
 import { mmContentBestiary } from './ui/contents/bestiary.js';
 import { mmContentMenagerie } from './ui/contents/menagerie.js';
+import { mmContentBazaar } from './ui/contents/bazaar.js';
+import { mmContentForum } from './ui/contents/forum.js';
+import { mmContentObservatory } from './ui/contents/observatory.js';
 
 MMDEBUG && console.log("mmContentHome:", mmContentHome);
 
@@ -29,7 +32,10 @@ const routes =
   { path: '/toolkit', component: mmContentToolKit },
   { path: '/formulary', component: mmContentFormulary },
   { path: '/bestiary', component: mmContentBestiary },
-  { path: '/menagerie', component: mmContentMenagerie }
+  { path: '/menagerie', component: mmContentMenagerie },
+  { path: '/bazaar', component: mmContentBazaar },
+  { path: '/forum', component: mmContentForum },
+  { path: '/observatory', component: mmContentObservatory }
 ];
 
 // ... then add them to the router ...

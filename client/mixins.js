@@ -1,4 +1,5 @@
 import { Session } from 'meteor/session';
+import { Showdown } from 'meteor/markdown';
 
 // Define data and methods in one place, used by multiple Vue components
 var drawerMixin =
@@ -57,4 +58,17 @@ var samecaseMixin =
 
 };
 
-export { drawerMixin, samecaseMixin };
+// Parse markdown
+const converter = new Showdown.converter();
+var markedMixin =
+{
+  methods:
+  {
+    marked:
+    function (text) {
+      return converter.makeHTML(text);
+    }
+  }
+};
+
+export { drawerMixin, samecaseMixin, markedMixin };

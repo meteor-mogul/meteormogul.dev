@@ -1,5 +1,10 @@
 # Changelog for meteormogul.dev
 
+## [0.0.12] - 2018-03-19
+
+- Routing continued again
+- Markdown parser
+
 ## [0.0.11] - 2018-03-18
 
 - Routing continued
