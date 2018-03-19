@@ -23,6 +23,7 @@ This app uses
 - Vuetify for the front-end components,
 - Material Design Icon Fonts for icons, and
 - vue meteor tracker to allow Vue components to see Meteor reactivity.
+- Meteor's markdown package so I can write content in Markdown
 
 ## Application Structure
 
@@ -35,6 +36,7 @@ Here's what's in each folder:
 .meteor/                  # meteor files (packages, versions, etc.)
 client/                   # code that runs on client only
   ui/                     # vue components
+    contents/             # contents (orientation, etc.)
     menus/                # menus (learn, play, create)
   api/                    # domain logic and data structures
     lists/                # lists (docs, demos, repos)
@@ -61,6 +63,8 @@ MMDEBUG && console.log("mmContentHome defined in home.js:", mmContentHome);
 
 Each Vue instance and component is defined by one `.html` file that contains its template, inside `<script type="text/x-template" id="name">`, and one `.js` file that contains its code.
 
+Some Vue components also have a `.md.js` file that contains markdown text.
+
 The main Vue app is defined in `client/main.js`.
 
 Rather than registering components globablly with `Vue.component()`, I use local registration by giving each instance and component a `components` attribute.
@@ -70,15 +74,24 @@ For example, here is the definition of the main Vue instance, locally registerin
 ```js
 // Create the Vue instance
 var mmVue = new Vue({
-    template: '#mm-app-template',
-    components: {
+
+    template:
+    '#mm-app-template',
+
+    components:
+    {
       'mm-navdrawer': mmNavdrawer,
       'mm-toolbar': mmToolbar,
       'mm-content': mmContent,
       'mm-footer': mmFooter
     },
+
     // Get common data and methods
-    mixins: [drawerMixin]
+    mixins:
+    [
+      drawerMixin
+    ]
+
   // We're getting fancy with the $mount API.
   // See https://vuejs.org/v2/api/#vm-mount
 }).$mount('#app');
@@ -128,6 +141,49 @@ var drawerMixin =
 ```
 
 NOTE: While it is tempting to use that mixin to also injects the router, so every component that gets the drawerMixin can also do routing, this leads to circular imports and a P5 Bug.  See "Circular Import Dependencies" in BUGS.
+
+### Markdown
+
+It gets tedious to write in HTML.  So I'm using the Meteor `markdown` package, which exports `Showdown`, a JavaScript version of Markdown, so my app can parse markdown strings.
+
+I've added a `markedMixin` which provides a `marked` method.  Pass a string with markdown text to this method and it will return raw HTML.  Use `v-html` in a Vue component to display the markdown text.  E.g.,
+
+```html
+<v-card-text v-html="marked(mdText)"></v-card-text>
+```
+
+```js
+import { markedMixin } from '../../mixins.js';
+import { Showdown } from 'meteor/markdown';
+// markdown text for orientation
+import { mdText } from './orientation.md.js';
+
+const converter = new Showdown.converter();
+
+var mmContentOrientation =
+{
+  name:
+  'mm-content-orientation',
+
+  template:
+  '#mm-content-orientation-template',
+
+  data:
+  function () {
+    return {
+      mdText
+    };
+  },
+
+  mixins:
+  [
+    markedMixin
+  ],
+
+};
+```
+
+I split out the markdown text into a separate file with a `.md.js` extension.  The `.js` allows this file to be imported.  You can tell Atom to syntax highlight these files as `GitHub Markdown`.
 
 ## Routing
 
