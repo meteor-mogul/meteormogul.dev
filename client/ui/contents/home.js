@@ -34,17 +34,17 @@ var mmContentHome =
             {
               title: "Orientation",
               tooltip: "Getting Started",
-              href: "/orientation"
+              href: "/orientation.html"
             },
             {
               title: "Survival Guide",
               tooltip: "Concepts and Strategies",
-              href: "/survivalguide"
+              href: "/survivalguide.html"
             },
             {
               title: "Toolkit",
               tooltip: "Your Development Environment",
-              href: "/toolkit"
+              href: "/toolkit.html"
             }
           ]
         },
@@ -55,17 +55,17 @@ var mmContentHome =
             {
               title: "Formulary",
               tooltip: "How To Do Stuff",
-              href: "/formulary"
+              href: "/formulary.html"
             },
             {
               title: "Bestiary",
               tooltip: "Bugs and Where to Find Them",
-              href: "/bestiary"
+              href: "/bestiary.html"
             },
             {
               title: "Menagerie",
               tooltip: "Demo Sites",
-              href: "/menagerie"
+              href: "/menagerie.html"
             }
           ]
         },
@@ -76,17 +76,17 @@ var mmContentHome =
             {
               title: "Bazaar",
               tooltip: "Shameless Commerce Division",
-              href: "/bazaar"
+              href: "/bazaar.html"
             },
             {
               title: "Forum",
               tooltip: "Where to Ask Questions and Share Answers",
-              href: "/forum"
+              href: "/forum.html"
             },
             {
               title: "Observatory",
               tooltip: "Related Projects and Resources",
-              href: "/observatory"
+              href: "/observatory.html"
             }
           ]
         }

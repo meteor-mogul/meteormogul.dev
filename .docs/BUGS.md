@@ -105,3 +105,11 @@ But you can call it like so:
 ```
 
 Vue.js automatically translates between camelCase and kebab-case for you.
+
+### Serving a Text-Only Version of the Website
+
+Responsive design is wonderful for graphic displays, but site is completely useless for blind users since text-only rendering is empty.
+
+How to get Meteor to serve up a version that works with text-only browsers?
+
+Do any text-only browsers support JavaScript?

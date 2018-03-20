@@ -6,7 +6,8 @@
         <v-card>
           <mm-content-heading content-title="Orientation"></mm-content-heading>
           <v-card-text v-html="marked(mdText)"></v-card-text>
-          <v-card-actions>Home | Next</v-card-actions>
+          <v-card-actions><router-link to="/index.html">Home</router-link>
+             | <router-link to="/survivalguide.html">Next</router-link></v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>

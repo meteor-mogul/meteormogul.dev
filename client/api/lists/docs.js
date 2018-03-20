@@ -3,14 +3,14 @@
 // href: Route to document
 var mmListDocs =
 [
-  { title: 'Orientation', href: '/orientation' },
-  { title: 'Survival Guide', href: '/survivalguide' },
-  { title: 'Toolkit', href: '/toolkit' },
-  { title: 'Formulary', href: '/formulary' },
-  { title: 'Bestiary', href: '/bestiary' },
-  { title: 'Bazaar', href: '/bazaar' },
-  { title: 'Forum', href: '/forum' },
-  { title: 'Observatory', href: '/observatory' }
+  { title: 'Orientation', href: '/orientation.html' },
+  { title: 'Survival Guide', href: '/survivalguide.html' },
+  { title: 'Toolkit', href: '/toolkit.html' },
+  { title: 'Formulary', href: '/formulary.html' },
+  { title: 'Bestiary', href: '/bestiary.html' },
+  { title: 'Bazaar', href: '/bazaar.html' },
+  { title: 'Forum', href: '/forum.html' },
+  { title: 'Observatory', href: '/observatory.html' }
 ];
 
 export { mmListDocs };

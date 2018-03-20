@@ -27,15 +27,16 @@ MMDEBUG && console.log("mmContentHome:", mmContentHome);
 const routes =
 [
   { path: '/', component: mmContentHome },
-  { path: '/orientation', component: mmContentOrientation },
-  { path: '/survivalguide', component: mmContentSurvivalGuide },
-  { path: '/toolkit', component: mmContentToolKit },
-  { path: '/formulary', component: mmContentFormulary },
-  { path: '/bestiary', component: mmContentBestiary },
-  { path: '/menagerie', component: mmContentMenagerie },
-  { path: '/bazaar', component: mmContentBazaar },
-  { path: '/forum', component: mmContentForum },
-  { path: '/observatory', component: mmContentObservatory }
+  { path: '/index.html', component: mmContentHome },
+  { path: '/orientation.html', component: mmContentOrientation },
+  { path: '/survivalguide.html', component: mmContentSurvivalGuide },
+  { path: '/toolkit.html', component: mmContentToolKit },
+  { path: '/formulary.html', component: mmContentFormulary },
+  { path: '/bestiary.html', component: mmContentBestiary },
+  { path: '/menagerie.html', component: mmContentMenagerie },
+  { path: '/bazaar.html', component: mmContentBazaar },
+  { path: '/forum.html', component: mmContentForum },
+  { path: '/observatory.html', component: mmContentObservatory }
 ];
 
 // ... then add them to the router ...

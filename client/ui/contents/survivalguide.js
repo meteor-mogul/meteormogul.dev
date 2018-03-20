@@ -1,8 +1,10 @@
 // Define content home vue component.
 import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin } from '../../mixins.js';
+import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
+// markdown text for Survival Guide
+import { mdText } from './survivalguide.md.js';
 
 var mmContentSurvivalGuide =
 {
@@ -12,10 +14,18 @@ var mmContentSurvivalGuide =
   template:
   '#mm-content-survivalguide-template',
 
+  data:
+  function () {
+    return {
+      mdText
+    };
+  },
+
   mixins:
   [
     drawerMixin,
-    samecaseMixin
+    samecaseMixin,
+    markedMixin
   ],
 
   components:

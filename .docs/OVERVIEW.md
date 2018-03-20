@@ -187,4 +187,4 @@ I split out the markdown text into a separate file with a `.md.js` extension.  T
 
 ## Routing
 
-Routing is done with [hash mode](https://router.vuejs.org/en/essentials/history-mode.html).  This allows the app to be packaged up as a static single-page app.
+Routing is done with [hash mode](https://router.vuejs.org/en/essentials/history-mode.html) because I can't figure out how to get `wget` to follow routes when the app is in `history mode`.
