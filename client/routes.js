@@ -23,7 +23,7 @@ MMDEBUG && console.log("mmContentHome:", mmContentHome);
 // const Menagerie = { template: '<span><v-icon>pets</v-icon> Menagerie</span>'};
 
 
-// Declare Happy and Sad routes...
+// Declare routes...
 const routes =
 [
   { path: '/', component: mmContentHome },

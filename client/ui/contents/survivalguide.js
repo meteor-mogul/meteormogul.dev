@@ -1,38 +1,31 @@
-// Define content home vue component.
+// Define content Survival Guide vue component.
 import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
-import { mmContentHeading } from './heading.js';
+import { mmArticleMixin, mmArticleLink } from './article.js';
 // markdown text for Survival Guide
 import { mdText } from './survivalguide.md.js';
+
+const article = 'survivalguide';
+const title = 'Survival Guide';
 
 var mmContentSurvivalGuide =
 {
   name:
-  'mm-content-survivalguide',
-
-  template:
-  '#mm-content-survivalguide-template',
+  'mm-content-' + article,
 
   data:
   function () {
     return {
-      mdText
+      title,
+      mdText,
+      prevLink: mmArticleLink(article,'prev'),
+      nextLink: mmArticleLink(article,'next')
     };
   },
 
   mixins:
   [
-    drawerMixin,
-    samecaseMixin,
-    markedMixin
-  ],
-
-  components:
-  {
-    'mm-quickstart': mmQuickStart,
-    'mm-content-heading': mmContentHeading
-  },
+    mmArticleMixin
+  ]
 
 };
 

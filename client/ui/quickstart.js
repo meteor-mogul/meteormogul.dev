@@ -7,7 +7,10 @@ var mmQuickStart =
 {
   name: 'mm-quickstart',
   template: '#mm-quickstart-template',
-  mixins: [drawerMixin]
+  mixins:
+  [
+    drawerMixin
+  ]
 };
 
 export { mmQuickStart };

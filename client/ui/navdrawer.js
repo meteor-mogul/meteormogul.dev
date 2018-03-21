@@ -7,35 +7,46 @@ import { drawerMixin } from '../mixins.js';
 // UI
 import { mmQuickStart } from './quickstart.js';
 import { mmListDocs } from '../api/lists/docs.js';
+import { mmListDemos } from '../api/lists/demos.js';
+import { mmListRepos } from '../api/lists/repos.js';
 
 var mmNavdrawer =
 {
-  name: 'mm-navdrawer',
-  template: '#mm-navdrawer-template',
-  mixins: [drawerMixin],
-  components: {
+  name:
+  'mm-navdrawer',
+
+  template:
+  '#mm-navdrawer-template',
+
+  mixins:
+  [
+    drawerMixin
+  ],
+
+  components:
+  {
     'mm-quickstart': mmQuickStart
   },
-  data: () => ({
-      drawer: false,
+
+  data:
+  function () {
+    return {
       docs: mmListDocs,
-      demos: [
-        { title: 'Hello, world!', href: 'https://meteor-mogul-hello-world.herokuapp.com/'},
-        { title: 'Meteor Mogul Vue Intro', href: 'https://meteor-mogul-vue-intro.herokuapp.com/'}
-      ],
-      repos: [
-        { title: 'Hello, world!', href: 'https://github.com/meteor-mogul/mogul-helloworld'},
-        { title: 'Meteor Mogul Vue Intro', href: 'https://github.com/meteor-mogul/vue-intro'}
-      ]
-    }),
-    methods: {
-      // Capture a true or false event on the navigation drawer itself,
-      // set Session var so that other components know the state.
-      recordDrawer: function (drawerValue) {
-        // console.log("Input received.  drawerValue: " + drawerValue );
-        Session.set('visibleDrawer', drawerValue);
-      }
+      demos: mmListDemos,
+      repos: mmListRepos
+    };
+  },
+
+  methods:
+  {
+    // Capture a true or false event on the navigation drawer itself,
+    // set Session var so that other components know the state.
+    recordDrawer:
+    function (drawerValue) {
+      // console.log("Input received.  drawerValue: " + drawerValue );
+      Session.set('visibleDrawer', drawerValue);
     }
+  }
 };
 
 export { mmNavdrawer };

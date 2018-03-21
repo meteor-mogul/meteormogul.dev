@@ -1,0 +1,21 @@
+<body>
+
+  <script type="text/x-template" id="mm-content-article-template">
+    <v-card>
+      <!-- Pass down title prop to mm-content-heading template -->
+      <mm-content-heading :content-title="title"></mm-content-heading>
+      <!-- marked is a method that returns markdown parsed to HTML -->
+      <v-card-text v-html="marked(mdText)"></v-card-text>
+      <v-divider></v-divider>
+      <v-card-actions>
+        <router-link to="/index.html">Home</router-link>
+        <v-spacer></v-spacer>
+        <router-link v-if="prevLink" :to="prevLink">Prev</router-link>
+        <!-- show a | only if both prev and next links are set -->
+        <span v-if="prevLink && nextLink">|</span>
+        <router-link v-if="nextLink" :to="nextLink">Next</router-link>
+      </v-card-actions>
+    </v-card>
+  </script>
+
+</body>

@@ -1,28 +1,31 @@
 // Define content home vue component.
 import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
-import { mmContentHeading } from './heading.js';
+import { mmArticleMixin, mmArticleLink } from './article.js';
+// markdown text for Survival Guide
+import { mdText } from './bestiary.md.js';
+
+const article = 'bestiary';
+const title = 'Bestiary';
 
 var mmContentBestiary =
 {
   name:
-  'mm-content-bestiary',
+  'mm-content-' + article,
 
-  template:
-  '#mm-content-bestiary-template',
+  data:
+  function () {
+    return {
+      title,
+      mdText,
+      prevLink: mmArticleLink(article,'prev'),
+      nextLink: mmArticleLink(article,'next')
+    };
+  },
 
   mixins:
   [
-    drawerMixin,
-    samecaseMixin
-  ],
-
-  components:
-  {
-    'mm-quickstart': mmQuickStart,
-    'mm-content-heading': mmContentHeading
-  },
+    mmArticleMixin
+  ]
 
 };
 

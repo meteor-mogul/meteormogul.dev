@@ -1,28 +1,31 @@
 // Define content home vue component.
 import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
-import { mmContentHeading } from './heading.js';
+import { mmArticleMixin, mmArticleLink } from './article.js';
+// markdown text for Survival Guide
+import { mdText } from './toolkit.md.js';
+
+const article = 'toolkit';
+const title = 'Toolkit';
 
 var mmContentToolKit =
 {
   name:
-  'mm-content-toolkit',
+  'mm-content-' + article,
 
-  template:
-  '#mm-content-toolkit-template',
+  data:
+  function () {
+    return {
+      title,
+      mdText,
+      prevLink: mmArticleLink(article,'prev'),
+      nextLink: mmArticleLink(article,'next')
+    };
+  },
 
   mixins:
   [
-    drawerMixin,
-    samecaseMixin
-  ],
-
-  components:
-  {
-    'mm-quickstart': mmQuickStart,
-    'mm-content-heading': mmContentHeading
-  },
+    mmArticleMixin
+  ]
 
 };
 

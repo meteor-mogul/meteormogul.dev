@@ -3,7 +3,7 @@
     <v-menu open-on-hover bottom offset-y>
       <v-btn slot="activator" :style="samecase">Play</v-btn>
       <v-list>
-        <v-subheader inset>Heroku Demos</v-subheader>
+        <v-subheader inset>Menagerie of Heroku Demos</v-subheader>
         <v-list-tile v-for="demo in demos" :key="demo.href">
           <v-list-tile-title><a :href="demo.href" target="_blank">{{ demo.title }}</a></v-list-tile-title>
         </v-list-tile>

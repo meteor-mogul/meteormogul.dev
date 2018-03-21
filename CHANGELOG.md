@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.16] - 2018-03-20
+
+- Add more content
+
 ## [0.0.15] - 2018-03-19
 
 - Add content

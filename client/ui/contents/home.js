@@ -2,6 +2,7 @@
 import { MMDEBUG } from '../../imports.js';
 import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
+import { mmObjDocs, mmListDocs } from '../../api/lists/docs.js';
 
 var mmContentHome =
 {
@@ -31,37 +32,17 @@ var mmContentHome =
           name: 'first',
           row:
           [
-            {
-              title: "Orientation",
-              tooltip: "Getting Started",
-              href: "/orientation.html"
-            },
-            {
-              title: "Survival Guide",
-              tooltip: "Concepts and Strategies",
-              href: "/survivalguide.html"
-            },
-            {
-              title: "Toolkit",
-              tooltip: "Your Development Environment",
-              href: "/toolkit.html"
-            }
+            mmObjDocs['orientation'],
+            mmObjDocs['survivalguide'],
+            mmObjDocs['toolkit']
           ]
         },
         {
           name: 'second',
           row:
           [
-            {
-              title: "Formulary",
-              tooltip: "How To Do Stuff",
-              href: "/formulary.html"
-            },
-            {
-              title: "Bestiary",
-              tooltip: "Bugs and Where to Find Them",
-              href: "/bestiary.html"
-            },
+            mmObjDocs['formulary'],
+            mmObjDocs['bestiary'],
             {
               title: "Menagerie",
               tooltip: "Demo Sites",
@@ -73,21 +54,9 @@ var mmContentHome =
           name: 'third',
           row:
           [
-            {
-              title: "Bazaar",
-              tooltip: "Shameless Commerce Division",
-              href: "/bazaar.html"
-            },
-            {
-              title: "Forum",
-              tooltip: "Where to Ask Questions and Share Answers",
-              href: "/forum.html"
-            },
-            {
-              title: "Observatory",
-              tooltip: "Related Projects and Resources",
-              href: "/observatory.html"
-            }
+            mmObjDocs['bazaar'],
+            mmObjDocs['forum'],
+            mmObjDocs['observatory']
           ]
         }
       ]

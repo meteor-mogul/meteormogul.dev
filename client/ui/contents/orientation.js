@@ -1,40 +1,32 @@
 // Define content home vue component.
 import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
-import { mmContentHeading } from './heading.js';
+import { mmArticleMixin, mmArticleLink } from './article.js';
 // markdown text for orientation
 import { mdText } from './orientation.md.js';
 
 //MMDEBUG = true;
+const article = 'orientation';
+const title = 'Orientation';
 
 var mmContentOrientation =
 {
   name:
-  'mm-content-orientation',
-
-  template:
-  '#mm-content-orientation-template',
+  'mm-content-' + article,
 
   data:
   function () {
     return {
-      mdText
+      title,
+      mdText,
+      prevLink: mmArticleLink(article,'prev'),
+      nextLink: mmArticleLink(article,'next')
     };
   },
 
   mixins:
   [
-    drawerMixin,
-    samecaseMixin,
-    markedMixin
-  ],
-
-  components:
-  {
-    'mm-quickstart': mmQuickStart,
-    'mm-content-heading': mmContentHeading
-  },
+    mmArticleMixin
+  ]
 
 };
 

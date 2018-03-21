@@ -1,6 +1,6 @@
 // Create a Vue instance that uses Vuetify and Vue Router
 
-import { drawerMixin } from '../mixins.js';
+import { drawerMixin, samecaseMixin } from '../mixins.js';
 import { mmQuickStart } from './quickstart.js';
 
 var mmContent =
@@ -13,7 +13,8 @@ var mmContent =
 
   mixins:
   [
-    drawerMixin
+    drawerMixin,
+    samecaseMixin
   ],
 
   components:
@@ -25,7 +26,6 @@ var mmContent =
   function () {
     return {
       breadcrumbs: 'Home / Breadcrumbs go here...',
-      samecase: "text-transform: none !important;"
     };
   }
 

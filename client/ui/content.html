@@ -11,10 +11,14 @@
               </v-tooltip></router-link>
               <!-- Use handlebars for displaying data. -->
               {{ breadcrumbs }}
-              <!-- VueRouter will replace <router-view> based on route. -->
             </v-flex>
           </v-layout>
-          <router-view></router-view>
+          <v-layout>
+            <v-flex>
+              <!-- VueRouter will replace <router-view> based on route. -->
+              <router-view></router-view>
+            </v-flex>
+        </v-layout>
         </v-container>
       </v-content>
   </script>

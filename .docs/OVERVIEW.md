@@ -1,10 +1,10 @@
 # Overview of meteormogul.dev
 
-Last update: March 18, 2018
+Last update: March 20, 2018
 
 This is an app for publishing a web site that will eventually be available at www.meteormogul.com.
 
-As a proof of concept, the website will be published as a static single-page app (static SPA) on Netlify.
+As a proof of concept, the website will be published as a static single-page app (static SPA) on [Netlify](https://www.netlify.com/).
 
 A static SPA is a bundle that consists of
 
@@ -25,6 +25,8 @@ This app uses
 - vue meteor tracker to allow Vue components to see Meteor reactivity.
 - Meteor's markdown package so I can write content in Markdown
 
+This repo is the app that serves a dynamic version of the website.  A separate repo, [`mogul-ssg`](https://github.com/meteor-mogul/mogul-ssg), has the code that takes any dynamic Meteor app and attempts to turn it into a static SPA.  See the docs for `mogul-ssg` to learn more about how it works.
+
 ## Application Structure
 
 I'm not exactly following the [Meteor Guide fo Application Structure](https://guide.meteor.com/structure.html).
@@ -35,11 +37,11 @@ Here's what's in each folder:
 .docs/                    # documentation
 .meteor/                  # meteor files (packages, versions, etc.)
 client/                   # code that runs on client only
+  api/                    # domain logic and data structures
+    lists/                # lists (docs, demos, repos)
   ui/                     # vue components
     contents/             # contents (orientation, etc.)
     menus/                # menus (learn, play, create)
-  api/                    # domain logic and data structures
-    lists/                # lists (docs, demos, repos)
 public/                   # other assets besides .html, .css, and .js files
   img/                    # image files
 server/                   # code that runs on server only
