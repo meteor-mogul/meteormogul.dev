@@ -12,6 +12,9 @@ var mmContentHome =
   template:
   '#mm-content-home-template',
 
+  path:
+  '/index.html',
+
   mixins:
   [
     drawerMixin,

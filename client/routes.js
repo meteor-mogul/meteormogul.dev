@@ -1,15 +1,15 @@
-// Declare routes.
+articles// Declare routes.
 import { MMDEBUG } from './imports.js';
 import { mmContentHome } from './ui/contents/home.js';
-import { mmContentOrientation } from './ui/contents/orientation.js';
-import { mmContentSurvivalGuide } from './ui/contents/survivalguide.js';
-import { mmContentToolKit } from './ui/contents/toolkit.js';
-import { mmContentFormulary } from './ui/contents/formulary.js';
-import { mmContentBestiary } from './ui/contents/bestiary.js';
-import { mmContentMenagerie } from './ui/contents/menagerie.js';
-import { mmContentBazaar } from './ui/contents/bazaar.js';
-import { mmContentForum } from './ui/contents/forum.js';
-import { mmContentObservatory } from './ui/contents/observatory.js';
+import { mmArticleOrientation } from './ui/contents/articles/orientation.js';
+import { mmArticleSurvivalGuide } from './ui/contents/articles/survivalguide.js';
+import { mmArticleToolKit } from './ui/contents/articles/toolkit.js';
+import { mmArticleFormulary } from './ui/contents/articles/formulary.js';
+import { mmArticleBestiary } from './ui/contents/articles/bestiary.js';
+import { mmArticleMenagerie } from './ui/contents/articles/menagerie.js';
+import { mmArticleBazaar } from './ui/contents/articles/bazaar.js';
+import { mmArticleForum } from './ui/contents/articles/forum.js';
+import { mmArticleObservatory } from './ui/contents/articles/observatory.js';
 
 MMDEBUG && console.log("mmContentHome:", mmContentHome);
 
@@ -27,16 +27,16 @@ MMDEBUG && console.log("mmContentHome:", mmContentHome);
 const routes =
 [
   { path: '/', component: mmContentHome },
-  { path: '/index.html', component: mmContentHome },
-  { path: '/orientation.html', component: mmContentOrientation },
-  { path: '/survivalguide.html', component: mmContentSurvivalGuide },
-  { path: '/toolkit.html', component: mmContentToolKit },
-  { path: '/formulary.html', component: mmContentFormulary },
-  { path: '/bestiary.html', component: mmContentBestiary },
-  { path: '/menagerie.html', component: mmContentMenagerie },
-  { path: '/bazaar.html', component: mmContentBazaar },
-  { path: '/forum.html', component: mmContentForum },
-  { path: '/observatory.html', component: mmContentObservatory }
+  { path: mmContentHome.path, component: mmContentHome },
+  { path: '/orientation.html', component: mmArticleOrientation },
+  { path: '/survivalguide.html', component: mmArticleSurvivalGuide },
+  { path: '/toolkit.html', component: mmArticleToolKit },
+  { path: '/formulary.html', component: mmArticleFormulary },
+  { path: '/bestiary.html', component: mmArticleBestiary },
+  { path: '/menagerie.html', component: mmArticleMenagerie },
+  { path: '/bazaar.html', component: mmArticleBazaar },
+  { path: '/forum.html', component: mmArticleForum },
+  { path: '/observatory.html', component: mmArticleObservatory }
 ];
 
 // ... then add them to the router ...

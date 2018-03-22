@@ -3,53 +3,64 @@ import { MMDEBUG } from '../../imports.js';
 import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
 import { mmContentHeading } from './heading.js';
-import { mmListArticles } from '../../api/lists/articles.js';
+import { mmListArticles } from '../../data/lists/articles.js';
+import { mmLister } from '../../api/lister.js';
 
 //MMDEBUG = true;
 
-var mmArticleLink =
+const mmListerArticles = new mmLister(mmListArticles);
+
+const mmArticleLink =
 function(article, direction) {
   MMDEBUG && console.log('mmArticleLink()', article, direction);
-  var position = mmListArticles.indexOf(article);
-  MMDEBUG && console.log('position', position);
+  var which = null;
   if (direction == 'prev') {
-    if (position == 0) {
-      return false;
-    }
-    position = position - 1;
+    which = mmListerArticles.before(article);
   }
   if (direction == 'next') {
-    if (position >= mmListArticles.length - 1) {
-      return false;
-    }
-    position = position + 1;
+    which = mmListerArticles.after(article);
   }
-  return '/' + mmListArticles[position] + '.html';
+  if (which) {
+    return '/' + which + '.html';
+  } else {
+    return which;
+  }
 };
 
-//MMDEBUG = true;
+// Constructor for articles.
+// A vue component that uses the mm-content-article-template
+function mmArticle(article, title, mdText) {
+    this.name:
+    'mm-content-' + article,
 
-var mmArticleMixin =
-{
-  template:
-  '#mm-content-article-template',
+    this.template:
+    '#mm-content-article-template',
 
-  components:
-  {
-    'mm-quickstart': mmQuickStart,
-    'mm-content-heading': mmContentHeading
-  },
+    this.components:
+    {
+      'mm-quickstart': mmQuickStart,
+      'mm-content-heading': mmContentHeading
+    },
 
-  mixins:
-  [
-    drawerMixin,
-    samecaseMixin,
-    markedMixin
-  ]
+    this.data:
+    function () {
+      return {
+        title,
+        mdText,
+        prevLink: mmArticleLink(article,'prev'),
+        nextLink: mmArticleLink(article,'next')
+      };
+    },
 
-};
+    this.mixins:
+    [
+      drawerMixin,
+      samecaseMixin,
+      markedMixin
+    ]
+}
 
-MMDEBUG && console.log("mmArticleMixin defined in article.js:",
-mmArticleMixin);
+MMDEBUG && console.log("mmArticle defined in article.js:",
+mmArticle);
 
-export { mmArticleMixin, mmArticleLink };
+export { mmArticle };
