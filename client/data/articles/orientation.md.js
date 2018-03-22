@@ -3,6 +3,10 @@
 export const mdText = `
 Meteor Mogul is a hobby project for learning [Meteor][meteor], [VueJS][vue] and [Vuetify](https://vuetifyjs.com/en/) to create personal apps for friends and family and demo apps for potential employers and investors.
 
+The Meteor Mogul project is a collection of [heavily-commented Meteor apps with public GitHub repos](https://github.com/meteor-mogul/) that you can study.  I can't promise that any of the apps is doing anything the "right" way, but I do try to make sure each app at least runs (or explain why it doesn't).  Read each repo's README.md!
+
+I'm [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) with the website you're currently reading, which starts life as [meteormogul.dev](https://github.com/meteor-mogul/meteormogul.dev), then gets processed by [Meteor Mogul static site generator](https://github.com/meteor-mogul/mogul-ssg), and finally is published on [netlify](https://www.netlify.com/).
+
 ## Getting Started
 
 ### Quick Start

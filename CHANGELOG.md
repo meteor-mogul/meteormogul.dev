@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.21] - 2018-03-22
+
+- Wordsmithing
+
 ## [0.0.20] - 2018-03-22
 
 - More help wanted
