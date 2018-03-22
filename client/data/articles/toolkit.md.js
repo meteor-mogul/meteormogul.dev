@@ -26,4 +26,10 @@ I recommend [Atom](https://atom.io/).
 # Source Control
 
 Get [GitHub Desktop](https://desktop.github.com/) to manage commits without having to remember \`git\` shell commands.
+
+# Meteor
+
+Once you have the above, you're good to go to get [Meteor](https://www.meteor.com/) and start coding.
+
+Once you're rockin' with \`meteor\`, you'll use it to keep everything updated, including all of the Atmosphere and npm packages you want to play with.
 `;
