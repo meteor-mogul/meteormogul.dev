@@ -35,7 +35,7 @@ VueJS is easy to learn and has momentum going for it -- the perfect match for Me
 
 The final piece to building web apps is a component framework.  This provides user interface widgets and styles that work within the view framework.  Vuetify is a component framework for Vue that has a great set of features for people learning to develop web apps.
 
-By the way, if you'd like to read my take on other full-stack JavaScript frameworks, view frameworks, component frameworks, and constellations of related open source software, see the <router-link to="/observatory.html">Observatory</router-link> [Observatory](/#/observatory.html).
+By the way, if you'd like to learn about other full-stack JavaScript frameworks, view frameworks, component frameworks, and constellations of related open source software, see the [Observatory](/#/observatory.html).
 
 ## Current Status of Meteor Mogul: Alpha
 
@@ -59,7 +59,7 @@ The main thing Meteor Mogul does is:
 
 So then when you write your \`.html\` files, vue.js deals with them instead of Blaze trying to compile them into Blaze templates.
 
-Another thing Meteor Mogul provides is the [vue-meteor-tracker](https://github.com/meteor-vue/vue-meteor-tracker) mixin for Vue so your Vue components can see [Tracker](https://docs.meteor.com/api/tracker.html) reactivity.  This comes in handy for writing Vue components that can use Meteor [Accounts](https://docs.meteor.com/api/accounts.html), [Collections](https://docs.meteor.com/api/collections.html) and [Session](https://docs.meteor.com/api/session.html).
+Another thing Meteor Mogul provide access to is the [vue-meteor-tracker](https://github.com/meteor-vue/vue-meteor-tracker) mixin for Vue so your Vue components can see [Tracker](https://docs.meteor.com/api/tracker.html) reactivity.  This comes in handy for writing Vue components that can use Meteor [Accounts](https://docs.meteor.com/api/accounts.html), [Collections](https://docs.meteor.com/api/collections.html) and [Session](https://docs.meteor.com/api/session.html).
 
 Meteor Mogul also provides access to a rich set of user interface widgets thanks to [Vuetify](https://github.com/meteor-mogul/mogul-vuetify-dist) and [Material Design icon fonts for Meteor](https://github.com/meteor-mogul/mogul-material-design-icons-fonts).
 
@@ -69,20 +69,25 @@ You can also use \`meteor npm\` to get the latest version of vue.js.
 
 In the Meteor universe of code, there are two main package managers and distribution sites:
 
-1. Atmosphere manages and distributes packages written specifically for Meteor.
-2. npm manages and distributes all sorts of JavaScript packages.  It started out as a repository for Node.js packages.
+1. Atmosphere: packages written specifically for Meteor.
+2. npm: all sorts of JavaScript packages (the name reflects its origins as a repository for Node.js packages).
 
-I decided to package up the VueJS distribution on Atmosphere for two reasons: 1) I find Atmosphere's package system to be very convenient, and 2) it was a good learning experience to dig into the Vue code to figure out how to provide \`Vue\` as an Atmosphere package.
+I decided to package up the VueJS distribution on Atmosphere for two reasons:
 
-Much as I like Atmosphere, the people running Meteor have warned that it may be going away and everyone should prepare to use \`npm\`.
+1. I find Atmosphere's package system to be very convenient, and
+2. It was a good learning experience to dig into the Vue code to figure out how to provide \`Vue\` as an Atmosphere package.
 
-So, if you want to play around with the \`npm\` version of VueJS, here's how to get the full build that includes template compilation:
+Much as I like Atmosphere, the people running Meteor have warned that it may be going away and everyone should start using \`npm\` now.
+
+So, if you want to follow that advice play around with the \`npm\` version of VueJS, here's how to get the full build that includes template compilation:
 
 \`\`\`
 $ meteor npm install vue
 \`\`\`
 
 Then in your \`.js\` files, \`import Vue from 'vue/dist/vue.js';\`.  If you just do \`import Vue from 'vue';\` you'll get the runtime version, which doesn't allow you to compile templates.
+
+As for me, I'm going to keep packaging up VueJS for Atmosphere until they shut it down.
 
 # Meteor and Other Concepts
 

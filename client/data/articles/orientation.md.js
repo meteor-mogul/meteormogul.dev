@@ -70,7 +70,7 @@ If you can't clone my code and at least get it to run, try reading the GitHub an
 
 The first thing you should know is that Meteor Mogul builds on more robust projects that are integrating VueJS with Meteor.  In particular, take a look at [vue+meteor](https://github.com/meteor-vue/vue-meteor).
 
-Meteor Mogul is one of my many hobbies; I often have to step away for months at a time.  Besides commenting the heck out of my code, I write prolific documentation to solidify what I'm learning, and to help me pick up where I left off.
+Meteor Mogul is one of my many hobbies; I often have to step away from coding for months at a time.  To help my future self pick up where I left off, I'm commenting the heck out of my code and writing prolific documentation to solidify what I'm learning.
 
 ### Documentation
 
@@ -111,7 +111,7 @@ I hope Meteor Mogul saves you some time if you're interested in seeing what it's
 
 Now, [go get some Meteor Mogul code](https://github.com/meteor-mogul)!
 
-Have fun!  
+Have fun!
 
 *\-Fred*
 

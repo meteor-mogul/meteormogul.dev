@@ -14,11 +14,15 @@ import { mmArticleMenagerie } from './ui/contents/articles/menagerie.js';
 import { mmArticleBazaar } from './ui/contents/articles/bazaar.js';
 import { mmArticleForum } from './ui/contents/articles/forum.js';
 import { mmArticleObservatory } from './ui/contents/articles/observatory.js';
+import { mmDonations } from './ui/contents/notices/donations.js';
+import { mmHelp } from './ui/contents/notices/help.js';
+import { mmCredits } from './ui/contents/notices/credits.js';
 
 export {
   mmNavdrawer, mmToolbar, mmContent, mmFooter,
   mmContentHome,
   mmArticleOrientation, mmArticleSurvivalGuide, mmArticleToolKit,
   mmArticleFormulary, mmArticleBestiary, mmArticleMenagerie,
-  mmArticleBazaar, mmArticleForum, mmArticleObservatory
+  mmArticleBazaar, mmArticleForum, mmArticleObservatory,
+  mmDonations, mmHelp, mmCredits
 };

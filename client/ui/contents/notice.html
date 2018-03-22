@@ -1,0 +1,12 @@
+<body>
+
+  <script type="text/x-template" id="mm-content-notice-template">
+    <v-card>
+      <!-- Pass down title prop to mm-content-heading template -->
+      <mm-content-heading :content-title="title"></mm-content-heading>
+      <!-- marked is a method that returns markdown parsed to HTML -->
+      <v-card-text v-html="marked(mdText)"></v-card-text>
+    </v-card>
+  </script>
+
+</body>

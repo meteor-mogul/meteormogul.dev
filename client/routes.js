@@ -4,7 +4,8 @@ import {
   mmContentHome,
   mmArticleOrientation, mmArticleSurvivalGuide, mmArticleToolKit,
   mmArticleFormulary, mmArticleBestiary, mmArticleMenagerie,
-  mmArticleBazaar, mmArticleForum, mmArticleObservatory
+  mmArticleBazaar, mmArticleForum, mmArticleObservatory,
+  mmDonations, mmHelp, mmCredits
 } from './imports-ui.js';
 
 MMDEBUG && console.log("mmContentHome:", mmContentHome);
@@ -22,7 +23,10 @@ const routes =
   { path: '/menagerie.html', component: mmArticleMenagerie },
   { path: '/bazaar.html', component: mmArticleBazaar },
   { path: '/forum.html', component: mmArticleForum },
-  { path: '/observatory.html', component: mmArticleObservatory }
+  { path: '/observatory.html', component: mmArticleObservatory },
+  { path: '/donations.html', component: mmDonations },
+  { path: '/help.html', component: mmHelp },
+  { path: '/credits.html', component: mmCredits }
 ];
 
 // ... then add them to the router ...
