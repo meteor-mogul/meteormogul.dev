@@ -1,5 +1,4 @@
-import { Session } from 'meteor/session';
-import { Showdown } from 'meteor/markdown';
+import { MMDEBUG, Session, Showdown } from './imports.js';
 
 //MMDEBUG = true;
 

@@ -1,7 +1,6 @@
 // Create a Vue instance that uses Vuetify and Vue Router
 
-import { drawerMixin, samecaseMixin } from '../mixins.js';
-import { mmQuickStart } from './quickstart.js';
+import { drawerMixin, samecaseMixin, mmQuickStart } from './imports.js';
 
 var mmContent =
 {

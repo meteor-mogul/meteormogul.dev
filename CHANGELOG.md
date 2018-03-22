@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.18] - 2018-03-21
+
+- Testing the refactor
+
 ## [0.0.17] - 2019-03-21
 
 - Refactoring

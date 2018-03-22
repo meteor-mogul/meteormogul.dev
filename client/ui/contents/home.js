@@ -2,7 +2,7 @@
 import { MMDEBUG } from '../../imports.js';
 import { drawerMixin, samecaseMixin } from '../../mixins.js';
 import { mmQuickStart } from '../quickstart.js';
-import { mmObjDocs, mmListDocs } from '../../api/lists/docs.js';
+import { mmObjDocs, mmListDocs } from '../../data/lists/docs.js';
 
 var mmContentHome =
 {

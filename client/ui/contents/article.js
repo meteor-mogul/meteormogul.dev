@@ -30,19 +30,19 @@ function(article, direction) {
 // Constructor for articles.
 // A vue component that uses the mm-content-article-template
 function mmArticle(article, title, mdText) {
-    this.name:
-    'mm-content-' + article,
+    this.name =
+    'mm-content-' + article;
 
-    this.template:
-    '#mm-content-article-template',
+    this.template =
+    '#mm-content-article-template';
 
-    this.components:
+    this.components =
     {
       'mm-quickstart': mmQuickStart,
       'mm-content-heading': mmContentHeading
-    },
+    };
 
-    this.data:
+    this.data =
     function () {
       return {
         title,
@@ -50,14 +50,14 @@ function mmArticle(article, title, mdText) {
         prevLink: mmArticleLink(article,'prev'),
         nextLink: mmArticleLink(article,'next')
       };
-    },
+    };
 
-    this.mixins:
+    this.mixins =
     [
       drawerMixin,
       samecaseMixin,
       markedMixin
-    ]
+    ];
 }
 
 MMDEBUG && console.log("mmArticle defined in article.js:",

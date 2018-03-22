@@ -6,9 +6,9 @@ import { Session } from 'meteor/session';
 import { drawerMixin } from '../mixins.js';
 // UI
 import { mmQuickStart } from './quickstart.js';
-import { mmListDocs } from '../api/lists/docs.js';
-import { mmListDemos } from '../api/lists/demos.js';
-import { mmListRepos } from '../api/lists/repos.js';
+import { mmListDocs } from '../data/lists/docs.js';
+import { mmListDemos } from '../data/lists/demos.js';
+import { mmListRepos } from '../data/lists/repos.js';
 
 var mmNavdrawer =
 {

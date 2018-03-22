@@ -1,7 +1,7 @@
 // Create a Vue component for the repositories menu
 import { drawerMixin, samecaseMixin } from '../../mixins.js';
 // List of repositories on GitHub
-import { mmListRepos } from '../../api/lists/repos.js';
+import { mmListRepos } from '../../data/lists/repos.js';
 
 var mmMenuCreate =
 {

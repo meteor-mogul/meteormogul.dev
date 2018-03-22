@@ -1,3 +1,13 @@
+// General imports
+
+// Debug flag
+import { MMDEBUG } from './debug.js';
+
+// Meteor packages
+import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
+import { Showdown } from 'meteor/markdown';
+
 // Import Vue-related symbols from packages.
 import { Vue } from 'meteor/meteormogul:vue-dist';
 import { Vuetify } from 'meteor/meteormogul:vuetify-dist';
@@ -16,7 +26,8 @@ Vue.use(Vuetify);
 // provide app functionality.
 Vue.use(VueRouter);
 
-// Debug flag
-import { MMDEBUG } from './debug.js';
-
-export { Vue, MMDEBUG };
+export {
+  MMDEBUG,
+  Meteor, Session, Showdown,
+  Vue
+};

@@ -1,15 +1,7 @@
 // First, import symbols from packages.
-import { Meteor } from 'meteor/meteor';
-import { Session } from 'meteor/session';
-// MM
-import { Vue } from './imports.js';
-import { drawerMixin, samecaseMixin } from './mixins.js';
-import { mmRouter } from './routes.js';
-// UI
-import { mmNavdrawer } from './ui/navdrawer.js';
-import { mmToolbar } from './ui/toolbar.js';
-import { mmContent } from './ui/content.js';
-import { mmFooter } from './ui/footer.js';
+import { MMDEBUG, Meteor, Session, Vue } from './imports.js';
+import { drawerMixin, samecaseMixin, mmRouter } from './imports-mm.js';
+import { mmNavdrawer, mmToolbar, mmContent, mmFooter } from './imports-ui.js';
 
 Meteor.startup(() => {
   // code to run on client at startup
