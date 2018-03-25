@@ -1,0 +1,27 @@
+<body>
+  <script type="text/x-template" id="mm-menu-template">
+    <v-menu open-on-hover bottom offset-y>
+      <v-btn slot="activator" :style="samecase">{{ title }}</v-btn>
+      <v-list>
+        <v-subheader inset>{{ subhead }}</v-subheader>
+        <v-list-tile v-for="item in items" :key="item.href">
+          <v-list-tile-title>
+            <!--
+              Link type depends on target.
+              _blank = <a href="">
+              router = <router-link to="">
+            -->
+            <a
+            v-if="item.target == '_blank'"
+            :href="item.href"
+            target="_blank">{{ item.title }}</a>
+            <router-link
+            v-if="item.target == 'router'"
+            :to="item.href">{{ item.title}}</router-link>
+            <span v-if="!item.target">{{ item.title}}</span>
+          </v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+  </script>
+</body>

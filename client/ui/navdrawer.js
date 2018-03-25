@@ -1,14 +1,10 @@
 // Create a Vue component for the navigation drawer
 
 // First, import symbols from packages.
-import { Session } from 'meteor/session';
-// MM
-import { drawerMixin } from '../mixins.js';
-// UI
-import { mmQuickStart } from './quickstart.js';
-import { mmListDocs } from '../data/lists/docs.js';
-import { mmListDemos } from '../data/lists/demos.js';
-import { mmListRepos } from '../data/lists/repos.js';
+import {
+  Session, drawerMixin, mmQuickStart,
+  mmListDocs, mmListDemos, mmListRepos
+ } from './imports.js';
 
 var mmNavdrawer =
 {

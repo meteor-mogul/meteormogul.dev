@@ -1,17 +1,17 @@
-// Define content home vue component.
+// Define notice vue component.
 import {
   MMDEBUG,
   drawerMixin, samecaseMixin, markedMixin,
   mmQuickStart,
   mmContentHeading
 } from './imports.js';
-import { mdText } from '../../../data/notices/donations.md.js';
+import { mdText } from '../../data/notices/credits.md.js';
 
 //MMDEBUG = true;
 
-var mmDonations = {
+var mmCredits = {
     name:
-    'mm-content-donations',
+    'mm-content-credits',
 
     template:
     '#mm-content-notice-template',
@@ -25,7 +25,7 @@ var mmDonations = {
     data:
     function () {
       return {
-        title: 'Donations',
+        title: 'Credits and Kudos',
         mdText
       };
     },
@@ -38,7 +38,7 @@ var mmDonations = {
     ]
 }
 
-MMDEBUG && console.log("mmDonations defined in donations.js:",
-mmDonations);
+MMDEBUG && console.log("mmCredits defined in credits.js:",
+mmCredits);
 
-export { mmDonations };
+export { mmCredits };

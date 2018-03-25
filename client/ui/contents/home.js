@@ -1,7 +1,9 @@
 // Define content home vue component.
-import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
+import {
+  MMDEBUG,
+  drawerMixin, samecaseMixin,
+  mmQuickStart
+} from './imports.js';
 import { mmObjDocs, mmListDocs } from '../../data/lists/docs.js';
 
 var mmContentHome =
@@ -11,9 +13,6 @@ var mmContentHome =
 
   template:
   '#mm-content-home-template',
-
-  path:
-  '/index.html',
 
   mixins:
   [

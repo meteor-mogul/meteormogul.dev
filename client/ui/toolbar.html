@@ -10,10 +10,9 @@
       </v-tooltip>
       <v-toolbar-title>Welcome to Meteor Mogul!</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <mm-menu-learn></mm-menu-learn>
-        <mm-menu-play></mm-menu-play>
-        <mm-menu-create></mm-menu-create>
+      <mm-menu-learn></mm-menu-learn>
+      <v-toolbar-items v-for="menu in menus" :key="menu.name">
+        <mm-menu :title="menu.title" :subhead="menu.subhead" :items="menu.items" :target="menu.target"></mm-menu>
       </v-toolbar-items>
     </v-toolbar>
   </script>

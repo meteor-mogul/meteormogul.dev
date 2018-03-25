@@ -1,6 +1,6 @@
 // Debugging flag.
 // true: print debug messages to console
 // false: do not
-MMDEBUG = false;
+var MMDEBUG = false;
 
 export { MMDEBUG };

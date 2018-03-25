@@ -1,10 +1,12 @@
 // Define content home vue component.
-import { MMDEBUG } from '../../imports.js';
-import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
-import { mmQuickStart } from '../quickstart.js';
-import { mmContentHeading } from './heading.js';
-import { mmListArticles } from '../../data/lists/articles.js';
-import { mmLister } from '../../api/lister.js';
+import {
+  MMDEBUG,
+  drawerMixin, samecaseMixin, markedMixin,
+  mmQuickStart,
+  mmContentHeading,
+  mmListArticles,
+  mmLister
+} from './imports.js';
 
 //MMDEBUG = true;
 

@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.22] - 2018-03-24
+
+- Cleaning up code
+
 ## [0.0.21] - 2018-03-22
 
 - Wordsmithing

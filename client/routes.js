@@ -14,7 +14,7 @@ MMDEBUG && console.log("mmContentHome:", mmContentHome);
 const routes =
 [
   { path: '/', component: mmContentHome },
-  { path: mmContentHome.path, component: mmContentHome },
+  { path: '/index.html', component: mmContentHome },
   { path: '/orientation.html', component: mmArticleOrientation },
   { path: '/survivalguide.html', component: mmArticleSurvivalGuide },
   { path: '/toolkit.html', component: mmArticleToolKit },

@@ -1,5 +1,3 @@
-// Create a Vue instance that uses Vuetify and Vue Router
-
 import { drawerMixin, samecaseMixin, mmQuickStart } from './imports.js';
 
 var mmContent =

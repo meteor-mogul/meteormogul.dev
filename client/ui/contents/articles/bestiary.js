@@ -1,7 +1,6 @@
-// Define content home vue component.
-import { MMDEBUG } from '../../../imports.js';
-import { mmArticle } from '../article.js';
-// markdown text for Survival Guide
+// Define bestiary component.
+import { MMDEBUG, mmArticle } from './imports.js';
+// markdown text for Bestiary
 import { mdText } from '../../../data/articles/bestiary.md.js';
 
 const mmArticleBestiary = new mmArticle('bestiary', 'Bestiary', mdText);

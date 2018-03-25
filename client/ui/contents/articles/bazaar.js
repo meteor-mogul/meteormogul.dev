@@ -1,6 +1,5 @@
 // Define content home vue component.
-import { MMDEBUG } from '../../../imports.js';
-import { mmArticle } from '../article.js';
+import { MMDEBUG, mmArticle } from './imports.js';
 // markdown text for Survival Guide
 import { mdText } from '../../../data/articles/bazaar.md.js';
 

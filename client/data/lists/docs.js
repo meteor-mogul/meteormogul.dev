@@ -7,56 +7,64 @@ var mmObjDocs =
   {
     title: 'Orientation',
     tooltip: "Getting Started",
-    href: '/orientation.html'
+    href: '/orientation.html',
+    target: 'router'
   },
 
   survivalguide:
   {
     title: 'Survival Guide',
     tooltip: "Concepts and Strategies",
-    href: '/survivalguide.html'
+    href: '/survivalguide.html',
+    target: 'router'
   },
 
   toolkit:
   {
     title: 'Toolkit',
     tooltip: "Development Environment",
-    href: '/toolkit.html'
+    href: '/toolkit.html',
+    target: 'router'
   },
 
   formulary:
   {
     title: 'Formulary',
     tooltip: "How To Do Stuff",
-    href: '/formulary.html'
+    href: '/formulary.html',
+    target: 'router'
   },
 
   bestiary:
   {
     title: 'Bestiary',
     tooltip: "Bugs and Where to Find Them",
-    href: '/bestiary.html'
+    href: '/bestiary.html',
+    target: 'router'
   },
 
   bazaar:
   {
     title: 'Bazaar',
     tooltip: "Shameless Commerce Division",
-    href: '/bazaar.html'
+    href: '/bazaar.html',
+    target: 'router'
   },
 
   forum:
   {
     title: 'Forum',
     tooltip: "Where to Ask Questions and Share Answers",
-    href: '/forum.html'
+    href: '/forum.html',
+    target: 'router'
   },
 
   observatory:
   {
     title: 'Observatory',
     tooltip: "Related Projects and Resources",
-    href: '/observatory.html'
+    href: '/observatory.html',
+    target: 'router'
   }
 };
 
