@@ -8,20 +8,7 @@ import { mdOrientation } from '../data/articles/orientation.md.js';
 import { mdSurvivalGuide } from '../data/articles/survivalguide.md.js';
 import { mdToolkit } from '../data/articles/toolkit.md.js';
 
-const mdArticles =
-{
-  bazaar: mdBazaar,
-  bestiary: mdBestiary,
-  formulary: mdFormulary,
-  forum: mdForum,
-  menagerie: mdMenagerie,
-  observatory: mdObservatory,
-  orientation: mdOrientation,
-  survivalguide: mdSurvivalGuide,
-  toolkit: mdToolkit
-};
-
-// List of articles
+// Ordered list of articles
 const mmListArticles =
 [
   'orientation',
@@ -35,7 +22,11 @@ const mmListArticles =
   'observatory'
 ];
 
-const mmObjArticles =
+// Articles API object
+//  name:
+//  title:
+//  markdown:
+const apiArticles =
 {
   orientation:
   {
@@ -46,55 +37,55 @@ const mmObjArticles =
   survivalguide:
   {
     name: 'survivalguide',
+    title: 'Survival Guide',
     markdown: mdSurvivalGuide
   },
   toolkit:
   {
     name: 'toolkit',
+    title: 'Toolkit',
     markdown: mdToolkit
   },
   formulary:
   {
     name: 'formulary',
+    title: 'Formulary',
     markdown: mdFormulary
   },
   bestiary:
   {
     name: 'bestiary',
+    title: 'Bestiary',
     markdown: mdBestiary
   },
   menagerie:
   {
     name: 'menagerie',
+    title: 'Menagerie',
     markdown: mdMenagerie
   },
   bazaar:
   {
     name: 'bazaar',
+    title: 'Bazaar',
     markdown: mdBazaar
   },
   forum:
   {
     name: 'forum',
+    title: 'Forum',
     markdown: mdForum
   },
   observatory:
   {
     name: 'observatory',
+    title: 'Observatory',
     markdown: mdObservatory
-  }
-};
-
-const mmArticles =
-{
+  },
   getList:
   function () {
     return mmListArticles;
-  },
-  getMarkdown:
-  function (article) {
-    return mdArticles[article];
   }
 };
 
-export { mmListArticles, mmObjArticles, mmArticles };
+export { mmListArticles, apiArticles };

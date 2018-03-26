@@ -38,6 +38,8 @@ function mmArticle(article, title, mdText) {
     this.template =
     '#mm-content-article-template';
 
+    this.path = '/' + article + '.html';
+
     this.components =
     {
       'mm-quickstart': mmQuickStart,

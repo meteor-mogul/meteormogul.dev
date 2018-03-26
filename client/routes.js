@@ -1,55 +1,46 @@
 // Declare routes.
 import { MMDEBUG } from './imports.js';
-
-// TODO: import an array of articles
-
 import {
   mmContentHome,
-  mmArticleOrientation, mmArticleSurvivalGuide, mmArticleToolKit,
-  mmArticleFormulary, mmArticleBestiary, mmArticleMenagerie,
-  mmArticleBazaar, mmArticleForum, mmArticleObservatory,
+  mmArticles,
   mmDonations, mmHelp, mmCredits
 } from './imports-ui.js';
 
-MMDEBUG = true;
-
+// MMDEBUG = true;
 MMDEBUG && console.log("mmContentHome:", mmContentHome);
-MMDEBUG && console.log("mmArticleOrientation:", mmArticleOrientation);
+MMDEBUG && console.log("mmArticles:", mmArticles);
+MMDEBUG && console.log("mmNotices:", mmNotices);
 
-// TODO: programmatically construct paths to types of components
-//       for example,
-//       1) import an array of article components
-//       2) forEach article, construct a path based on the name
-//       3) push path and component on routes
+// A route is a path to a component
+// Route components are defined in client/ui/views
 
 // Declare routes...
-const routes =
+var routes =
 [
   { path: '/', component: mmContentHome },
   { path: '/index.html', component: mmContentHome },
-  { path: '/orientation.html', component: mmArticleOrientation },
-  { path: '/survivalguide.html', component: mmArticleSurvivalGuide },
-  { path: '/toolkit.html', component: mmArticleToolKit },
-  { path: '/formulary.html', component: mmArticleFormulary },
-  { path: '/bestiary.html', component: mmArticleBestiary },
-  { path: '/menagerie.html', component: mmArticleMenagerie },
-  { path: '/bazaar.html', component: mmArticleBazaar },
-  { path: '/forum.html', component: mmArticleForum },
-  { path: '/observatory.html', component: mmArticleObservatory },
   { path: '/donations.html', component: mmDonations },
   { path: '/help.html', component: mmHelp },
   { path: '/credits.html', component: mmCredits }
 ];
 
-routes.forEach(function(route) {
-  route.component.path = route.path;
-  console.log(route);
+// (each article knows its own path)
+mmArticles.forEach(function(article) {
+  routes.push({ path: article.path, component: article });
 });
+
+// MMDEBUG = true;
+MMDEBUG && console.log('routes: ', routes);
 
 // ... then add them to the router ...
 const mmRouter =
 new VueRouter({
-  routes // short for `routes: routes`
+  routes, // short for `routes: routes`
+  // make the page scroll to top for all route navigations
+  // See https://router.vuejs.org/en/advanced/scroll-behavior.html
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });
 
 export { mmRouter };

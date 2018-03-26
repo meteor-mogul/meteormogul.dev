@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.24] - 2018-03-26
+
+- programmatically construct routes
+
 ## [0.0.23] - 2018-03-25
 
 - More code cleanup

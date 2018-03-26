@@ -40,7 +40,7 @@ client/                   # code that runs on client only
   api/                    # domain logic and access to data structures
   data/                   # data structures (articles, lists, notices)
   ui/                     # vue components (navdrawer, toolbar, content, footer)
-    contents/             # contents (home page, articles, notices, etc.)
+    views/                # content views (home page, articles, notices, etc.)
     widgets/              # quickstart, menus (learn, play, create)
 public/                   # other assets besides .html, .css, and .js files
   img/                    # image files

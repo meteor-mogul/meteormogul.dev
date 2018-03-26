@@ -15,7 +15,7 @@ Last updated: March 21, 2018
 - [mailchimp](https://mailchimp.com/) - for marketing emails
 - [jemjem](https://www.jemjem.com/) - source for used Macs
 - [amazon](https://www.amazon.com/) - I'm not just an owner, I also shop there
-- [codecademy](https://www.codecademy.com/catalog/subject/web-development) - a lot more affordable than my degree from Swarthmore
+- [codecademy](https://www.codecademy.com/catalog/subject/web-development) - a lot more affordable than Swarthmore
 - [unsplash](https://unsplash.com/) - free (as in free beer) pix
 - [xfinity](https://www.xfinity.com/) - not that I have a choice... it's great when it's working...
 

@@ -21,7 +21,7 @@ var mmNavdrawer =
 
   components:
   {
-    'mm-quickstart': mmQuickStart
+    'mm-quickstart': mmQuickStart // client/ui/widgets/quickstart
   },
 
   data:

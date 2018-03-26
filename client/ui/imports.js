@@ -4,6 +4,7 @@
 import { Session } from 'meteor/session';
 import { drawerMixin, samecaseMixin } from '../mixins.js';
 import { mmListDocs, mmListDemos, mmListRepos } from '../api/lists.js';
+import { mmBreadCrumbs } from './widgets/breadcrumbs.js';
 import { mmQuickStart } from './widgets/quickstart.js';
 import { mmMenu } from './widgets/menu.js';
 import { mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate } from './widgets/menus.js';
@@ -12,6 +13,6 @@ export {
   Session,
   drawerMixin, samecaseMixin,
   mmListDocs, mmListDemos, mmListRepos,
-  mmQuickStart,
+  mmBreadCrumbs, mmQuickStart,
   mmMenu, mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate
 };

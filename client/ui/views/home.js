@@ -4,7 +4,7 @@ import {
   drawerMixin, samecaseMixin,
   mmQuickStart
 } from './imports.js';
-import { mmObjDocs, mmListDocs } from '../../data/lists/docs.js';
+import { mmObjDocs, mmListDocs } from '../../api/lists.js';
 
 var mmContentHome =
 {

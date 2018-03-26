@@ -1,4 +1,4 @@
-// Define content home vue component.
+// Define donations vue component.
 import {
   MMDEBUG,
   drawerMixin, samecaseMixin, markedMixin,

@@ -1,4 +1,4 @@
-import { drawerMixin, samecaseMixin, mmQuickStart } from './imports.js';
+import { drawerMixin, samecaseMixin, mmQuickStart, mmBreadCrumbs } from './imports.js';
 
 var mmContent =
 {
@@ -16,7 +16,8 @@ var mmContent =
 
   components:
   {
-    'mm-quickstart': mmQuickStart
+    'mm-quickstart': mmQuickStart,  // client/ui/widgets/quickstart
+    'mm-breadcrumbs': mmBreadCrumbs // client/ui/widgets/breadcrumbs
   },
 
   data:
