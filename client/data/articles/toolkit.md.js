@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdToolkit = `
 Here are my specific recommendations for your development environment.
 
 # MacOS or Linux

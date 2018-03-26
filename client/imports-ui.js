@@ -4,19 +4,21 @@ import { mmNavdrawer } from './ui/navdrawer.js';
 import { mmToolbar } from './ui/toolbar.js';
 import { mmContent } from './ui/content.js';
 import { mmFooter } from './ui/footer.js';
-import { mmContentHome } from './ui/contents/home.js';
-import { mmArticleOrientation } from './ui/contents/articles/orientation.js';
-import { mmArticleSurvivalGuide } from './ui/contents/articles/survivalguide.js';
-import { mmArticleToolKit } from './ui/contents/articles/toolkit.js';
-import { mmArticleFormulary } from './ui/contents/articles/formulary.js';
-import { mmArticleBestiary } from './ui/contents/articles/bestiary.js';
-import { mmArticleMenagerie } from './ui/contents/articles/menagerie.js';
-import { mmArticleBazaar } from './ui/contents/articles/bazaar.js';
-import { mmArticleForum } from './ui/contents/articles/forum.js';
-import { mmArticleObservatory } from './ui/contents/articles/observatory.js';
-import { mmDonations } from './ui/contents/notices/donations.js';
-import { mmHelp } from './ui/contents/notices/help.js';
-import { mmCredits } from './ui/contents/notices/credits.js';
+import { mmContentHome } from './ui/views/home.js';
+import {
+  mmArticleOrientation,
+  mmArticleSurvivalGuide,
+  mmArticleToolKit,
+  mmArticleFormulary,
+  mmArticleBestiary,
+  mmArticleMenagerie,
+  mmArticleBazaar,
+  mmArticleForum,
+  mmArticleObservatory
+} from './ui/views/articles.js';
+import { mmDonations } from './ui/views/notices/donations.js';
+import { mmHelp } from './ui/views/notices/help.js';
+import { mmCredits } from './ui/views/notices/credits.js';
 
 export {
   mmNavdrawer, mmToolbar, mmContent, mmFooter,

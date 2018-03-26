@@ -2,7 +2,7 @@ import { MMDEBUG } from '../../imports.js';
 import { drawerMixin, samecaseMixin, markedMixin } from '../../mixins.js';
 import { mmQuickStart } from '../widgets/quickstart.js';
 import { mmContentHeading } from './parts/heading.js';
-import { mmListArticles } from '../../api/articles.js';
+import { mmListArticles, mmArticles } from '../../api/articles.js';
 import { mmLister } from '../../api/lister.js';
 
 export {
@@ -11,5 +11,6 @@ export {
   mmQuickStart,
   mmContentHeading,
   mmListArticles,
+  mmArticles,
   mmLister
 };

@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdMenagerie = `
 Here's a menagerie of Meteor Mogul demos running on heroku. More to come!
 
 - [Hello, world!](https://meteor-mogul-hello-world.herokuapp.com/) - Start here.

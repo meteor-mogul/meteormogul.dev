@@ -1,10 +1,10 @@
 # Overview of meteormogul.dev
 
-Last update: March 20, 2018
+Last update: March 25, 2018
 
-This is an app for publishing a web site that will eventually be available at www.meteormogul.com.
+This is an app for publishing www.meteormogul.com.
 
-As a proof of concept, the website will be published as a static single-page app (static SPA) on [Netlify](https://www.netlify.com/).
+As a proof of concept, the website is published as a static single-page app (static SPA) on [Netlify](https://www.netlify.com/).
 
 A static SPA is a bundle that consists of
 
@@ -37,11 +37,11 @@ Here's what's in each folder:
 .docs/                    # documentation
 .meteor/                  # meteor files (packages, versions, etc.)
 client/                   # code that runs on client only
-  api/                    # domain logic and data structures
-    lists/                # lists (docs, demos, repos)
-  ui/                     # vue components
-    contents/             # contents (orientation, etc.)
-    menus/                # menus (learn, play, create)
+  api/                    # domain logic and access to data structures
+  data/                   # data structures (articles, lists, notices)
+  ui/                     # vue components (navdrawer, toolbar, content, footer)
+    contents/             # contents (home page, articles, notices, etc.)
+    widgets/              # quickstart, menus (learn, play, create)
 public/                   # other assets besides .html, .css, and .js files
   img/                    # image files
 server/                   # code that runs on server only
@@ -98,6 +98,165 @@ var mmVue = new Vue({
   // See https://vuejs.org/v2/api/#vm-mount
 }).$mount('#app');
 ```
+
+### Constructors versus child components
+
+You have two choices about how to build Vue components.
+
+For example, if you want three menus you can either define 1) a menu maker function or 2) a menu component.
+
+#### Constructor pattern (e.g., mmMenuMaker)
+
+This pattern might make sense if you need a small set of components and want to make your template code simple.
+
+Create the maker function:
+
+```js
+function mmMenuMaker(menu, title, subhead, items, target) {
+  this.name =
+  'mm-menu-' + menu;
+
+  this.template =
+  '#mm-menu-template';
+
+  this.data =
+  function () {
+    return {
+      title,
+      subhead,
+      items,
+      target
+    };
+  };
+}
+```
+
+Create menus with the maker function:
+
+```js
+const mmMenuLearn = new mmMenuMaker('learn','Learn','Documentation',mmListDocs,'router');
+```
+
+Add the menu as a component:
+
+```js
+var mmToolbar =
+{
+  name: 'mm-toolbar',
+  template: '#mm-toolbar-template',
+
+  components:
+  {
+    'mm-menu-learn': mmMenuLearn
+  },
+};
+
+```
+
+Use the menu in a template:
+
+```html
+<mm-menu-learn></mm-menu-learn>
+```
+
+Notes about this pattern:
+- Every child component gets unique name and tag
+- Best for use cases where you have limited number of child components known in advance
+
+Advantages to this pattern:
+- Gives maximum flexibility to override definition of each child component.
+- Component name shows up in Vue debugger
+- Don't need to pass props in template
+
+#### Child component pattern (e.g., mmMenu)
+
+Use this pattern if you need to make many similar components.
+
+Create the component:
+
+```js
+var mmMenu =
+{
+  name:
+  'mm-menu',
+
+  template:
+  '#mm-menu-template',
+
+  props:
+  [
+      'title',
+      'subhead',
+      'items',
+      'target'
+  ]
+};
+```
+
+Use menu as a child component and set up data in parent component to pass as props to children:
+
+```js
+var mmMenus =
+{
+  learn:
+  {
+    name: 'learn',
+    title: 'Learn',
+    subhead: 'Documentation',
+    items: mmListDocs,
+    target: 'router'
+  },
+  play:
+  {
+    name: 'play',
+    title: 'Play',
+    subhead: 'heroku demos',
+    items: mmListDemos,
+    target: '_blank'
+  },
+  create:
+  {
+    name: 'create',
+    title: 'Create',
+    subhead: 'GitHub repos',
+    items: mmListRepos,
+    target: '_blank'
+  }
+};
+
+var mmToolbar =
+{
+  name: 'mm-toolbar',
+  template: '#mm-toolbar-template',
+
+  components:
+  {
+    'mm-menu': mmMenu,
+  },
+
+  data:
+  function() {
+    return {
+      menus: mmMenus
+    };
+  }
+};
+```
+
+Use menus in a template:
+
+```html
+<v-toolbar-items v-for="menu in menus" :key="menu.name">
+  <mm-menu :title="menu.title" :subhead="menu.subhead" :items="menu.items" :target="menu.target"></mm-menu>
+</v-toolbar-items>
+```
+
+Notes about this pattern:
+- Every child component has same name and tag
+- Best for use cases where number of child components is large or can vary
+
+Advantages to this pattern:
+- Can easily make many copies of similar components
 
 ### Mixins
 

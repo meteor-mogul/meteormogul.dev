@@ -1,4 +1,4 @@
-import { mmListDocs, mmListDemos, mmListRepos } from './imports.js';
+import { mmListDocs, mmListDemos, mmListRepos, mmMenuMaker } from './imports.js';
 
 var mmMenus =
 {
@@ -28,4 +28,8 @@ var mmMenus =
   }
 };
 
-export { mmMenus };
+const mmMenuLearn = new mmMenuMaker('learn','Learn','Documentation',mmListDocs,'router');
+const mmMenuPlay = new mmMenuMaker('play','Play','heroku demos',mmListDemos,'_blank');
+const mmMenuCreate = new mmMenuMaker('create','Create','GitHub repos',mmListRepos,'_blank');
+
+export { mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate };

@@ -7,6 +7,8 @@ MMDEBUG && console.log('mmToolbar: ', mmToolbar);
 
 Meteor.startup(() => {
   // code to run on client at startup
+
+  // Hide navdrawer
   Session.set('visibleDrawer', false);
 
   // Create the Vue instance

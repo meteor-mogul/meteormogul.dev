@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.23] - 2018-03-25
+
+- More code cleanup
+
 ## [0.0.22] - 2018-03-24
 
 - Cleaning up code

@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdSurvivalGuide = `
 I'm writing this survival guide to share what I wish somebody had told me when I started playing around with Meteor.
 
 # Meteor Mogul Core Concepts

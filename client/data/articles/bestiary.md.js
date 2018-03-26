@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdBestiary = `
 # Bugs in meteormogul.dev and Where to Find Them
 
 For all the gory details about bugs and other nasties, see the [GitHub Issue tracker](https://github.com/meteor-mogul/meteormogul.dev/issues).

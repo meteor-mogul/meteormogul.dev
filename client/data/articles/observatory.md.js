@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdObservatory = `
 # Meteor Mogul References and Resources
 
 Last updated: March 17, 2018

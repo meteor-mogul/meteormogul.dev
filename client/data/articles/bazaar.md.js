@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdBazaar = `
 Here are services and vendors I use for my coding needs.  I'm not getting paid to link to them... yet.
 
 Last updated: March 21, 2018

@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdFormulary = `
 Once I learn how to do more things with Meteor Mogul, I'll put the recipes in this formulary.
 
 ## Debugging

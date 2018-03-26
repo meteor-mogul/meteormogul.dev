@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdForum = `
 There is no forum specifically for Meteor Mogul, but here are some places where you can ask questions and get answers about things related to Meteor Mogul:
 
 - [stack overflow](https://stackoverflow.com/) - use keyword search
