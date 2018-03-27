@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.26] - 2018-03-26
+
+- README clean up
+
 ## [0.0.25] - 2018-03-26
 
 - access data through api
