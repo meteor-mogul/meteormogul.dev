@@ -1,10 +1,6 @@
 // Declare routes.
 import { MMDEBUG } from './imports.js';
-import {
-  mmContentHome,
-  mmArticles,
-  mmDonations, mmHelp, mmCredits
-} from './imports-ui.js';
+import { mmContentHome, mmArticles, mmNotices } from './imports-ui.js';
 
 // MMDEBUG = true;
 MMDEBUG && console.log("mmContentHome:", mmContentHome);
@@ -18,15 +14,17 @@ MMDEBUG && console.log("mmNotices:", mmNotices);
 var routes =
 [
   { path: '/', component: mmContentHome },
-  { path: '/index.html', component: mmContentHome },
-  { path: '/donations.html', component: mmDonations },
-  { path: '/help.html', component: mmHelp },
-  { path: '/credits.html', component: mmCredits }
+  { path: '/index.html', component: mmContentHome }
 ];
 
 // (each article knows its own path)
 mmArticles.forEach(function(article) {
   routes.push({ path: article.path, component: article });
+});
+
+// (each notice knows its own path)
+mmNotices.forEach(function(notice) {
+  routes.push({ path: notice.path, component: notice });
 });
 
 // MMDEBUG = true;

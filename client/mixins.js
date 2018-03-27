@@ -13,6 +13,7 @@ var drawerMixin =
     };
   },
 
+  // Tap into Meteor reactivity by using Session to update visibleDrawer
   meteor:
   {
     visibleDrawer:

@@ -1,12 +1,12 @@
-import { mdBazaar } from '../data/articles/bazaar.md.js';
-import { mdBestiary } from '../data/articles/bestiary.md.js';
-import { mdFormulary } from '../data/articles/formulary.md.js';
-import { mdForum } from '../data/articles/forum.md.js';
-import { mdMenagerie } from '../data/articles/menagerie.md.js';
-import { mdObservatory } from '../data/articles/observatory.md.js';
-import { mdOrientation } from '../data/articles/orientation.md.js';
-import { mdSurvivalGuide } from '../data/articles/survivalguide.md.js';
-import { mdToolkit } from '../data/articles/toolkit.md.js';
+import { mdBazaar } from '../../data/articles/bazaar.md.js';
+import { mdBestiary } from '../../data/articles/bestiary.md.js';
+import { mdFormulary } from '../../data/articles/formulary.md.js';
+import { mdForum } from '../../data/articles/forum.md.js';
+import { mdMenagerie } from '../../data/articles/menagerie.md.js';
+import { mdObservatory } from '../../data/articles/observatory.md.js';
+import { mdOrientation } from '../../data/articles/orientation.md.js';
+import { mdSurvivalGuide } from '../../data/articles/survivalguide.md.js';
+import { mdToolkit } from '../../data/articles/toolkit.md.js';
 
 // Ordered list of articles
 const mmListArticles =
@@ -88,4 +88,4 @@ const apiArticles =
   }
 };
 
-export { mmListArticles, apiArticles };
+export { apiArticles };

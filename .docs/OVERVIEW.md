@@ -38,6 +38,8 @@ Here's what's in each folder:
 .meteor/                  # meteor files (packages, versions, etc.)
 client/                   # code that runs on client only
   api/                    # domain logic and access to data structures
+    nouns/                # objects for data structures
+    verbs/                # methods for using data structures
   data/                   # data structures (articles, lists, notices)
   ui/                     # vue components (navdrawer, toolbar, content, footer)
     views/                # content views (home page, articles, notices, etc.)

@@ -2,9 +2,9 @@
 import {
   MMDEBUG,
   drawerMixin, samecaseMixin,
-  mmQuickStart
+  mmQuickStart,
+  apiDocs
 } from './imports.js';
-import { mmObjDocs, mmListDocs } from '../../api/lists.js';
 
 var mmContentHome =
 {
@@ -34,17 +34,17 @@ var mmContentHome =
           name: 'first',
           row:
           [
-            mmObjDocs['orientation'],
-            mmObjDocs['survivalguide'],
-            mmObjDocs['toolkit']
+            apiDocs['orientation'],
+            apiDocs['survivalguide'],
+            apiDocs['toolkit']
           ]
         },
         {
           name: 'second',
           row:
           [
-            mmObjDocs['formulary'],
-            mmObjDocs['bestiary'],
+            apiDocs['formulary'],
+            apiDocs['bestiary'],
             {
               title: "Menagerie",
               tooltip: "Demo Sites",
@@ -56,9 +56,9 @@ var mmContentHome =
           name: 'third',
           row:
           [
-            mmObjDocs['bazaar'],
-            mmObjDocs['forum'],
-            mmObjDocs['observatory']
+            apiDocs['bazaar'],
+            apiDocs['forum'],
+            apiDocs['observatory']
           ]
         }
       ]

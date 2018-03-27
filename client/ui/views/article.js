@@ -4,13 +4,13 @@ import {
   drawerMixin, samecaseMixin, markedMixin,
   mmQuickStart,
   mmContentHeading,
-  mmListArticles,
+  apiArticles,
   mmLister
 } from './imports.js';
 
 //MMDEBUG = true;
 
-const mmListerArticles = new mmLister(mmListArticles);
+const mmListerArticles = new mmLister(apiArticles.getList());
 
 const mmArticleLink =
 function(article, direction) {
@@ -31,7 +31,7 @@ function(article, direction) {
 
 // Constructor for articles.
 // A vue component that uses the mm-content-article-template
-function mmArticle(article, title, mdText) {
+function mmArticleMaker(article, title, mdText) {
     this.name =
     'mm-content-' + article;
 
@@ -64,7 +64,7 @@ function mmArticle(article, title, mdText) {
     ];
 }
 
-MMDEBUG && console.log("mmArticle defined in article.js:",
-mmArticle);
+MMDEBUG && console.log("mmArticleMaker defined in article.js:",
+mmArticleMaker);
 
-export { mmArticle };
+export { mmArticleMaker };

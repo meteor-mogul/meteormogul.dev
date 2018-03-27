@@ -1,5 +1,9 @@
 # Changelog for meteormogul.dev
 
+## [0.0.25] - 2018-03-26
+
+- access data through api
+
 ## [0.0.24] - 2018-03-26
 
 - programmatically construct routes

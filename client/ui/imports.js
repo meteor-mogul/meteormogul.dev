@@ -3,7 +3,7 @@
 // doesn't have to remember relative paths to import files.
 import { Session } from 'meteor/session';
 import { drawerMixin, samecaseMixin } from '../mixins.js';
-import { mmListDocs, mmListDemos, mmListRepos } from '../api/lists.js';
+import { apiDocs, mmListDemos, mmListRepos } from '../api/nouns/lists.js';
 import { mmBreadCrumbs } from './widgets/breadcrumbs.js';
 import { mmQuickStart } from './widgets/quickstart.js';
 import { mmMenu } from './widgets/menu.js';
@@ -12,7 +12,7 @@ import { mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate } from './widgets/menus.
 export {
   Session,
   drawerMixin, samecaseMixin,
-  mmListDocs, mmListDemos, mmListRepos,
+  apiDocs, mmListDemos, mmListRepos,
   mmBreadCrumbs, mmQuickStart,
   mmMenu, mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate
 };

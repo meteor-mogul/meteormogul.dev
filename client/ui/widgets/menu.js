@@ -7,6 +7,8 @@
 //          null for no link (<span>)
 import { drawerMixin, samecaseMixin } from './imports.js';
 
+// Two ways you can do menus.
+// Menu Pattern 1: Define one component and pass props to each instance.
 var mmMenu =
 {
   name:
@@ -29,6 +31,7 @@ var mmMenu =
   ]
 };
 
+// Menu Pattern 2: Use a constructor to create different components.
 function mmMenuMaker(menu, title, subhead, items, target) {
   this.name =
   'mm-menu-' + menu;

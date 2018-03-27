@@ -3,42 +3,45 @@ import {
   MMDEBUG,
   drawerMixin, samecaseMixin, markedMixin,
   mmQuickStart,
-  mmContentHeading
+  mmContentHeading,
+  apiNotices
 } from './imports.js';
-import { mdText } from '../../data/notices/credits.md.js';
 
 //MMDEBUG = true;
+// Constructor for notices.
+// A vue component that uses the mm-content-notice-template
+function mmNoticeMaker(notice, title, mdText) {
+    this.name =
+    'mm-content-' + notice;
 
-var mmCredits = {
-    name:
-    'mm-content-credits',
+    this.template =
+    '#mm-content-notice-template';
 
-    template:
-    '#mm-content-notice-template',
+    this.path = '/' + notice + '.html';
 
-    components:
+    this.components =
     {
       'mm-quickstart': mmQuickStart,
       'mm-content-heading': mmContentHeading
-    },
+    };
 
-    data:
+    this.data =
     function () {
       return {
-        title: 'Credits and Kudos',
+        title,
         mdText
       };
-    },
+    };
 
-    mixins:
+    this.mixins =
     [
       drawerMixin,
       samecaseMixin,
       markedMixin
-    ]
+    ];
 }
 
-MMDEBUG && console.log("mmCredits defined in credits.js:",
-mmCredits);
+MMDEBUG && console.log("mmNoticeMaker defined in notice.js:",
+mmNoticeMaker);
 
-export { mmCredits };
+export { mmNoticeMaker };

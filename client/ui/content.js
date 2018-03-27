@@ -20,13 +20,6 @@ var mmContent =
     'mm-breadcrumbs': mmBreadCrumbs // client/ui/widgets/breadcrumbs
   },
 
-  data:
-  function () {
-    return {
-      breadcrumbs: 'Home / Breadcrumbs go here...',
-    };
-  }
-
 };
 
 export { mmContent };

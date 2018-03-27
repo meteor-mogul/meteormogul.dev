@@ -14,8 +14,6 @@ I really should figure out how to go from dynamic to static, i.e., build a fully
 
 1. All access to data structures through api.
 1. Three types of views: 1) home page, 2) articles, 3) notices
-1. Pass article and notice components as arrays.
-1. Programmatically construct paths to types of components.
 1. Use path to component for router-link to.  E.g. footer should know that it contains links to three notices and should know how to look up path of each of these notices.
 1. Fix data/lists/docs.js and api/lists.js, then get ui/views/home.js working with api access to data.  Access to docs object and list should be through api not directly to data.
 

@@ -1,6 +1,6 @@
 // This file must end in .js so it can be imported.
 // But you can set Atom grammar to syntax highlight as markdown.
-export const mdText = `
+export const mdDonations = `
 # Contributing to Meteor Mogul
 
 Last update: March 17, 2018
@@ -26,6 +26,6 @@ I'm not set up to accept money for Meteor Mogul, but if you find Meteor Mogul he
 - Donate to [support Vue](https://vuejs.org/support-vuejs/)
 - Donate to [support Vuetify](https://www.patreon.com/vuetify)
 
-Thanks!
+Thanks!  
 -Fred Horch, Brunswick, Maine
 `;
