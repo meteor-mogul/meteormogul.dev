@@ -1,5 +1,6 @@
 import { apiDocs, apiDemos, apiRepos, mmMenuMaker } from './imports.js';
 
+// Menu Pattern 1: Use child components and props.
 var mmMenus =
 {
   learn:
@@ -28,8 +29,13 @@ var mmMenus =
   }
 };
 
-const mmMenuLearn = new mmMenuMaker('learn','Learn','Documentation',apiDocs.getList(),'router');
-const mmMenuPlay = new mmMenuMaker('play','Play','heroku demos',apiDemos.getList(),'_blank');
-const mmMenuCreate = new mmMenuMaker('create','Create','GitHub repos',apiRepos.getList(),'_blank');
+// Menu Pattern 2: Use a constructor to create different components.
+const mmMenuLearn =
+new mmMenuMaker('learn','Learn','Documentation',apiDocs.getList(),'router');
+const mmMenuPlay =
+new mmMenuMaker('play','Play','heroku demos',apiDemos.getList(),'_blank');
+const mmMenuCreate =
+new mmMenuMaker('create','Create','GitHub repos',apiRepos.getList(),'_blank');
 
+// Export symbols for both patterns so both options are available.
 export { mmMenus, mmMenuLearn, mmMenuPlay, mmMenuCreate };

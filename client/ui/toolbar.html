@@ -10,17 +10,19 @@
       </v-tooltip>
       <v-toolbar-title>Welcome to Meteor Mogul!</v-toolbar-title>
       <v-spacer></v-spacer>
+
+      <!-- Menu Pattern 1: Use child components and props.
+           Use data or a method to iterate over menus. -->
+      <!-- <v-toolbar-items v-for="menu in menus" :key="menu.name">
+        <mm-menu :title="menu.title" :subhead="menu.subhead" :items="menu.items" :target="menu.target"></mm-menu>
+      </v-toolbar-items> -->
+
+      <!-- Menu Pattern 2: Use a constructor to create different components. -->
       <v-toolbar-items>
         <mm-menu-learn></mm-menu-learn>
         <mm-menu-play></mm-menu-play>
         <mm-menu-create></mm-menu-create>
       </v-toolbar-items>
-      <!-- As an alternative to the above, could programmatically construct
-           menus from a list using child components and props.
-           Use data or a method to iterate over menus. -->
-      <!-- <v-toolbar-items v-for="menu in menus" :key="menu.name">
-        <mm-menu :title="menu.title" :subhead="menu.subhead" :items="menu.items" :target="menu.target"></mm-menu>
-      </v-toolbar-items> -->
     </v-toolbar>
   </script>
 </body>
