@@ -1,7 +1,7 @@
 // List of repositories
 // title: Name of repository
 // href: Route to repository
-var mmListRepos =
+var reposData =
 [
   {
     title: 'Hello, world!',
@@ -45,4 +45,6 @@ var mmListRepos =
   }
 ];
 
-export { mmListRepos };
+const reposList = reposData;
+
+export { reposData, reposList };

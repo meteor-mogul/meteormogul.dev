@@ -1,40 +1,11 @@
-import { mdCredits } from '../../data/notices/credits.md.js';
-import { mdDonations } from '../../data/notices/donations.md.js';
-import { mdHelp } from '../../data/notices/help.md.js';
+import { noticesList, noticesData } from '../../data/notices.js';
 
-// Ordered list of notices
-const mmListNotices =
-[
-  'credits',
-  'donations',
-  'help'
-];
-
-// Notices API object
-const apiNotices =
-{
-  credits:
-  {
-    name:  'credits',
-    title: 'Credits and Kudos',
-    markdown: mdCredits
-  },
-  donations:
-  {
-    name:  'donations',
-    title: 'Donations',
-    markdown: mdDonations
-  },
-  help:
-  {
-    name:  'help',
-    title: 'Help Wanted',
-    markdown: mdHelp
-  },
-  getList:
-  function () {
-    return mmListNotices;
-  }
+// This object includes all the data plus a .getList() method
+// which returns an ordered list of notices.
+var apiNotices = noticesData;
+apiNotices.getList =
+function () {
+  return noticesList;
 };
 
 export { apiNotices };

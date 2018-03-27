@@ -57,8 +57,16 @@ var mmContentHome =
           row:
           [
             apiDocs['bazaar'],
+            apiDocs['insertion'],
             apiDocs['forum'],
             apiDocs['observatory']
+          ]
+        },
+        {
+          name: 'fourth',
+          row:
+          [
+            apiDocs['insertion']
           ]
         }
       ]

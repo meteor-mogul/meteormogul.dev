@@ -11,3 +11,7 @@ Nouns are api objects that provide access to data structures.
 ## Verbs = Methods
 
 Verbs are helper functions that provide methods for using nouns.
+
+### Lister
+
+Provides a previous / next link to navigate through the list of articles.

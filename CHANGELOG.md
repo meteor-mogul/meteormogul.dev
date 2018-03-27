@@ -1,5 +1,10 @@
 # Changelog for meteormogul.dev
 
+## [0.0.27] - 2018-03-27
+
+- standardize data and api
+- testing insertion of new article
+
 ## [0.0.26] - 2018-03-26
 
 - README clean up

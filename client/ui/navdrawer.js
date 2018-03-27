@@ -3,7 +3,7 @@
 // First, import symbols from packages.
 import {
   Session, drawerMixin, mmQuickStart,
-  apiDocs, mmListDemos, mmListRepos
+  apiDocs, apiDemos, apiRepos
  } from './imports.js';
 
 var mmNavdrawer =
@@ -28,8 +28,8 @@ var mmNavdrawer =
   function () {
     return {
       docs: apiDocs.getList(),
-      demos: mmListDemos,
-      repos: mmListRepos
+      demos: apiDemos.getList(),
+      repos: apiRepos.getList()
     };
   },
 

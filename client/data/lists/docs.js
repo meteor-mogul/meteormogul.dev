@@ -1,7 +1,7 @@
-// List of documentation
+// Documentation
 // title: Name of document
 // href: Route to document
-var mmObjDocs =
+const docsData =
 {
   orientation:
   {
@@ -51,6 +51,14 @@ var mmObjDocs =
     target: 'router'
   },
 
+  insertion:
+  {
+    title: 'Insertion',
+    tooltip: "Testing insertion of new article",
+    href: '/insertion.html',
+    target: 'router'
+  },
+
   forum:
   {
     title: 'Forum',
@@ -68,16 +76,17 @@ var mmObjDocs =
   }
 };
 
-var mmListDocs =
+const docsList =
 [
-  mmObjDocs['orientation'],
-  mmObjDocs['survivalguide'],
-  mmObjDocs['toolkit'],
-  mmObjDocs['formulary'],
-  mmObjDocs['bestiary'],
-  mmObjDocs['bazaar'],
-  mmObjDocs['forum'],
-  mmObjDocs['observatory']
+  docsData['orientation'],
+  docsData['survivalguide'],
+  docsData['toolkit'],
+  docsData['formulary'],
+  docsData['bestiary'],
+  docsData['bazaar'],
+  docsData['insertion'],
+  docsData['forum'],
+  docsData['observatory']
 ];
 
-export { mmObjDocs, mmListDocs };
+export { docsData, docsList };

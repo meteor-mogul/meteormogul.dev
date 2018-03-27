@@ -1,8 +1,8 @@
-// List of demonstrations
+// Demonstrations data
 //  title: Name of demonstration
 //  href: Route to demonstration
 //  target: _blank for external links
-var mmListDemos =
+const demosData =
 [
   {
     title: 'Hello, world!',
@@ -16,4 +16,7 @@ var mmListDemos =
   }
 ];
 
-export { mmListDemos };
+// Demonstrations list
+const demosList = demosData;
+
+export { demosList, demosData };
